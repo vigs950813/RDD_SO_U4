@@ -18,6 +18,7 @@
     <link href="../css/header.css" rel="stylesheet" />
     <link href="../css/navbar.css" rel="stylesheet" />
     <link href="../css/card.css" rel="stylesheet" />
+    <link href="../css/acordeon.css" rel="stylesheet" />
     <link href="../css/offcanvas.css" rel="stylesheet" />
     <link href="../css/pagination.css" rel="stylesheet" />
     <link href="../css/footer.css" rel="stylesheet" />
@@ -54,9 +55,101 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        En construcción.
+                        La <strong>capa del sistema de archivos</strong> es la encargada de gestionar las operaciones
+                        básicas que los usuarios y aplicaciones realizan sobre los archivos, como la
+                        creación, modificación, lectura y eliminación de archivos y directorios. Esta capa se
+                        sitúa entre las aplicaciones y el hardware, actuando como una interfaz que oculta la
+                        complejidad de las operaciones de bajo nivel que se realizan en los dispositivos de
+                        almacenamiento.
                     </p>
 
+                    <p class="card-text">
+                        La capa del sistema de archivos se puede dividir en varias subcapas o
+                        componentes, cada una con un rol específico en la gestión de los datos. Estas
+                        subcapas incluyen:
+                    </p>
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                Interfaz del sistema de archivos
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p class="card-text">
+                                    Esta subcapa es responsable de proporcionar la interfaz que los usuarios y
+                                aplicaciones utilizan para interactuar con el sistema de archivos. Los comandos que
+                                los usuarios ejecutan en la terminal o los llamados a funciones específicas en una
+                                API se procesan a través de esta subcapa. Proporciona operaciones como abrir,
+                                cerrar, leer y escribir archivos. En sistemas como UNIX y Linux, estas operaciones
+                                están encapsuladas en llamadas al sistema, como open(), read(), write() y close().
+                                </p>
+                                <p class="card-text">
+                                    Ejemplo
+                                </p>
+                                <p class="text-center">
+                                    <img src="../images/Ej1.png" class="img-fluid" alt="Ejemplo 1">
+                                </p>
+                                
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                              Accordion Item #2
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                              Accordion Item #4
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                              Accordion Item #5
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <strong>This is the fifth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
                   
 
                     <ul class="pagination justify-content-end">
