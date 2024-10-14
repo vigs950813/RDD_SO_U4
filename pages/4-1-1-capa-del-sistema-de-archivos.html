@@ -2,185 +2,289 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>4.1.1 Capa del sistema de archivos</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>4.1.1 Capa del sistema de archivos</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <!-- Bootstrap CSS-->
-    <!-- Local CSS-->
-    <link href="../css/header.css" rel="stylesheet" />
-    <link href="../css/navbar.css" rel="stylesheet" />
-    <link href="../css/card.css" rel="stylesheet" />
-    <link href="../css/acordeon.css" rel="stylesheet" />
-    <link href="../css/offcanvas.css" rel="stylesheet" />
-    <link href="../css/pagination.css" rel="stylesheet" />
-    <link href="../css/footer.css" rel="stylesheet" />
+  <!-- Bootstrap CSS-->
+  <!-- Local CSS-->
+  <link href="../css/header.css" rel="stylesheet" />
+  <link href="../css/navbar.css" rel="stylesheet" />
+  <link href="../css/card.css" rel="stylesheet" />
+  <link href="../css/acordeon.css" rel="stylesheet" />
+  <link href="../css/offcanvas.css" rel="stylesheet" />
+  <link href="../css/pagination.css" rel="stylesheet" />
+  <link href="../css/footer.css" rel="stylesheet" />
 
 
-    <!-- Local CSS-->
-    <!-- Local JS-->
-    <script src="../js/headerPagesLoader.js"></script>
-    <script src="../js/navbarContentLoader.js"></script>
-    <script src="../js/offcanvasLoader.js"></script>
-    <script src="../js/footerPagesLoader.js"></script>
-    <!-- Local JS-->
+  <!-- Local CSS-->
+  <!-- Local JS-->
+  <script src="../js/headerPagesLoader.js"></script>
+  <script src="../js/navbarContentLoader.js"></script>
+  <script src="../js/offcanvasLoader.js"></script>
+  <script src="../js/footerPagesLoader.js"></script>
+  <!-- Local JS-->
 </head>
 
 <body>
 
-    <div id="offcanvas-container">
+  <div id="offcanvas-container">
 
-    </div>
+  </div>
 
 
-    <!-- Header -->
-    <div id="header-container"></div>
-    <!-- Header -->
-    <!-- Navbar -->
-    <div id="navbar-container"></div>
-    <!-- Navbar -->
-    <!-- Page content -->
+  <!-- Header -->
+  <div id="header-container"></div>
+  <!-- Header -->
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+  <!-- Navbar -->
+  <!-- Page content -->
 
-    <main>
-        <section>
-            <div class="card">
-                <h5 class="card-header">4.1.1 Capa del sistema de archivos</h5>
-                <div class="card-body">
-
-                    <p class="card-text">
-                        La <strong>capa del sistema de archivos</strong> es la encargada de gestionar las operaciones
-                        básicas que los usuarios y aplicaciones realizan sobre los archivos, como la
-                        creación, modificación, lectura y eliminación de archivos y directorios. Esta capa se
-                        sitúa entre las aplicaciones y el hardware, actuando como una interfaz que oculta la
-                        complejidad de las operaciones de bajo nivel que se realizan en los dispositivos de
-                        almacenamiento.
-                    </p>
-
-                    <p class="card-text">
-                        La capa del sistema de archivos se puede dividir en varias subcapas o
-                        componentes, cada una con un rol específico en la gestión de los datos. Estas
-                        subcapas incluyen:
-                    </p>
-
-                    <div class="accordion" id="accordionPanelsStayOpenExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                Interfaz del sistema de archivos
-                            </button>
-                          </h2>
-                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <p class="card-text">
-                                    Esta subcapa es responsable de proporcionar la interfaz que los usuarios y
-                                aplicaciones utilizan para interactuar con el sistema de archivos. Los comandos que
-                                los usuarios ejecutan en la terminal o los llamados a funciones específicas en una
-                                API se procesan a través de esta subcapa. Proporciona operaciones como abrir,
-                                cerrar, leer y escribir archivos. En sistemas como UNIX y Linux, estas operaciones
-                                están encapsuladas en llamadas al sistema, como open(), read(), write() y close().
-                                </p>
-                                <p class="card-text">
-                                    Ejemplo
-                                </p>
-                                <p class="text-center">
-                                    <img src="../images/Ej1.png" class="img-fluid" alt="Ejemplo 1">
-                                </p>
-                                
-                            </div>
-                          </div>
-                        </div>
-                      
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                              Accordion Item #2
-                            </button>
-                          </h2>
-                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
-                            </div>
-                          </div>
-                        </div>
-                      
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                              Accordion Item #3
-                            </button>
-                          </h2>
-                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
-                            </div>
-                          </div>
-                        </div>
-                      
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                              Accordion Item #4
-                            </button>
-                          </h2>
-                          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                              <strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
-                            </div>
-                          </div>
-                        </div>
-                      
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-                              Accordion Item #5
-                            </button>
-                          </h2>
-                          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                              <strong>This is the fifth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                  
-
-                    <ul class="pagination justify-content-end">
-                        <li class="page-item">
-                            <a class="page-link" href="../index.html">Anterior</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="introduccion.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="4-1-estructura-del-sistema-de-archivos.html">2</a></li>
-                        <li class="page-item active"><a class="page-link" href="4-1-1-capa-del-sistema-de-archivos.html">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="4-2-implementacion.html">Siguiente Tema</a>
-                        </li>
-                    </ul>
-
+  <main>
+    <section>
+      <div class="card">
+        <h5 class="card-header">4.1.1 Capa del sistema de archivos</h5>
+        <div class="card-body">
+          <p class="card-text">
+            La <strong>capa del sistema de archivos</strong> es la encargada de gestionar las operaciones
+            básicas que los usuarios y aplicaciones realizan sobre los archivos, como la
+            creación, modificación, lectura y eliminación de archivos y directorios. Esta capa se
+            sitúa entre las aplicaciones y el hardware, actuando como una interfaz que oculta la
+            complejidad de las operaciones de bajo nivel que se realizan en los dispositivos de
+            almacenamiento.
+          </p>
+          <p class="card-text">
+            La capa del sistema de archivos se puede dividir en varias subcapas o
+            componentes, cada una con un rol específico en la gestión de los datos. Estas
+            subcapas incluyen:
+          </p>
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  Interfaz del sistema de archivos
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  <p class="card-text">
+                    Esta subcapa es responsable de proporcionar la interfaz que los usuarios y
+                    aplicaciones utilizan para interactuar con el sistema de archivos. Los comandos que
+                    los usuarios ejecutan en la terminal o los llamados a funciones específicas en una
+                    API se procesan a través de esta subcapa. Proporciona operaciones como abrir,
+                    cerrar, leer y escribir archivos. En sistemas como UNIX y Linux, estas operaciones
+                    están encapsuladas en llamadas al sistema, como open(), read(), write() y close().
+                  </p>
+                  <p class="card-text">
+                    Ejemplo
+                  </p>
+                  <p class="text-center">
+                    <img src="../images/Ej1.png" class="img-fluid" alt="Ejemplo 1">
+                  </p>
+                  <p class="card-text">
+                    En este ejemplo, el archivo se abre y su contenido se lee mediante llamadas al
+                    sistema que forman parte de la interfaz del sistema de archivos.
+                  </p>
                 </div>
+              </div>
             </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo">
+                  Gestión de nombres y directorios
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p class="card-text">
+                    Otra responsabilidad importante de la capa del sistema de archivos es gestionar los
+                    nombres de archivos y la estructura de los directorios. En esta subcapa se
+                    implementan las funciones que permiten a los usuarios organizar sus archivos en
+                    una estructura de carpetas y subcarpetas, facilitando la organización y búsqueda de
+                    datos. Los sistemas operativos utilizan una <strong>tabla de directorios</strong> que almacena
+                    información sobre la ubicación de cada archivo en el sistema.
+                  </p>
+                  <p class="card-text">
+                    Por ejemplo, en sistemas operativos como Linux, la estructura jerárquica se organiza
+                    en forma de árbol, donde el directorio raíz (/) es la raíz del sistema de archivos, y
+                    debajo de él se encuentran otros directorios y archivos organizados de manera
+                    recursiva.
+                  </p>
+                  <p class="text-center">
+                    <img src="../images/Ej2.png" class="img-fluid" alt="Ejemplo 2">
+                  </p>
+                  <p class="card-text">
+                    En este ejemplo, los archivos están organizados bajo varios directorios,
+                    siguiendo una estructura jerárquica clara.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree">
+                  Gestión del espacio en disco
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p class="card-text">Esta subcapa es responsable de la asignación y administración del espacio en el
+                    dispositivo de almacenamiento. Cada vez que se crea un archivo o se amplía, el
+                    sistema de archivos debe decidir cómo asignar bloques de disco para almacenar los
+                    datos. La gestión eficiente del espacio en disco incluye la localización de bloques
+                    libres, la liberación de bloques que ya no se necesitan y la optimización del
+                    almacenamiento para reducir la fragmentación.</p>
+                  <p class="card-text">Los sistemas de archivos utilizan diferentes estrategias para asignar espacio en
+                    disco. Algunos, como el sistema de archivos ext4 en Linux, utilizan una estrategia
+                    basada en <strong>bloques</strong>, donde los archivos se dividen en bloques de tamaño fijo que se
+                    asignan de manera contigua cuando es posible. Otros sistemas de archivos, como
+                    <strong>NTFS</strong> en Windows, utilizan una estructura de <strong>clústeres</strong> y pueden
+                    fragmentar un
+                    archivo en múltiples ubicaciones si no hay espacio contiguo suficiente.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFour">
+                  Gestión de metadatos
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p class="card-text">Además de los datos de los archivos, el sistema de archivos también debe
+                    gestionar
+                    los metadatos, que incluyen información como los permisos de acceso, la fecha de
+                    creación, la fecha de modificación y el tamaño de los archivos. Estos metadatos se
+                    almacenan en una estructura separada de los datos de los archivos, y el sistema de
+                    archivos debe asegurarse de que siempre estén sincronizados con los datos
+                    correspondientes.</p>
+                  <p class="card-text">
+                    Por ejemplo, en sistemas como ext4, los metadatos se almacenan en <strong>inodos</strong>, que
+                    contienen toda la información necesaria para localizar los datos de un archivo en el
+                    disco y para mantener los atributos del archivo. Cada archivo y directorio tiene un
+                    inodo asociado que el sistema utiliza para gestionar su ubicación y propiedades.
+                  </p>
+                  <p class="text-center">
+                    <img src="../images/Ej3.png" class="img-fluid" alt="Ejemplo 3">
+                  </p>
+                  <p class="card-text">
+                    En este caso, los metadatos incluyen los permisos (-rw-r—r—), el propietario
+                    (usuario), el grupo (grupo), el tamaño del archivo (1024 bytes), y la fecha de
+                    última modificación (oct 5 10:32).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFive">
+                  Control de acceso y permisos
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p class="card-text">La capa del sistema de archivos también se encarga de implementar políticas de
+                    seguridad mediante el control de acceso y la gestión de permisos. Cada archivo y
+                    directorio tiene permisos asociados que determinan quién puede leer, escribir o
+                    ejecutar un archivo. Estos permisos son administrados por el sistema de archivos y
+                    son fundamentales para la seguridad y el aislamiento de los usuarios y procesos en
+                    un sistema operativo multiusuario.</p>
+                  <p class="card-text">Los permisos generalmente se representan utilizando un esquema numérico o
+                    simbólico, como en los sistemas basados en UNIX, donde los permisos se dividen
+                    en tres grupos: propietario, grupo y otros, con permisos de lectura ®, escritura (w) y
+                    ejecución (x).</p>
+                  <p class="text-center">
+                    <img src="../images/Ej4.png" class="img-fluid" alt="Ejemplo 4">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        </section>
+    <section>
+      <div class="card">
+        <h5 class="card-header">Ejemplo práctico: Función de la capa del sistema de archivos</h5>
+        <div class="card-body">
+          <p class="card-text">
+            Supongamos que un usuario desea copiar un archivo de un directorio a otro en un
+            sistema de archivos UNIX. Este proceso implica varias operaciones que son
+            gestionadas por la capa del sistema de archivos:
+          </p>
+          <ol type="1" class="card-text">
+            <li>El sistema de archivos busca en la tabla de directorios la ubicación física del
+              archivo en el disco.</li>
+            <li>Se acceden a los bloques de disco que contienen los datos del archivo y se
+              copian en la memoria.</li>
+            <li>Se crea una nueva entrada en la tabla de directorios del destino, asociando un
+              nuevo inodo al archivo copiado.</li>
+            <li>Se asignan bloques de disco libres para almacenar los datos en la nueva
+              ubicación.</li>
+            <li>Se actualizan los metadatos del archivo copiado, como la fecha de creación y
+              los permisos.</li>
+          </ol>
 
+          <p class="card-text">Este proceso es completamente gestionado por la capa del sistema de archivos, sin
+            que el usuario necesite conocer los detalles de la asignación de bloques o el manejo
+            de inodos.</p>
+          <p class="card-text">La capa del sistema de archivos es una parte esencial en la estructura del sistema
+            operativo que facilita la interacción entre los usuarios y las aplicaciones con los
+            datos almacenados en el sistema. A través de múltiples subcapas, como la interfaz
+            de usuario, la gestión de nombres y directorios, la asignación de espacio en disco, y
+            el control de acceso, esta capa abstrae la complejidad de las operaciones en los
+            dispositivos de almacenamiento, ofreciendo una interfaz coherente y eficiente para
+            el manejo de los archivos.</p>
 
-    </main>
+            <br>
+         
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="../index.html">Anterior</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="introduccion.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="4-1-estructura-del-sistema-de-archivos.html">2</a></li>
+            <li class="page-item active"><a class="page-link" href="4-1-1-capa-del-sistema-de-archivos.html">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="4-2-implementacion.html">Siguiente Tema</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <!-- Page content -->
-    <!-- Footer -->
-    <div id="footer-container"></div>
-    <!-- Footer -->
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <!-- Core theme JS-->
+  </main>
+
+  <!-- Page content -->
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <!-- Footer -->
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <!-- Core theme JS-->
 </body>
 
 </html>
