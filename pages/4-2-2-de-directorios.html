@@ -57,10 +57,106 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        En construcción
-                       </p>
+                        Los directorios son una parte esencial de la organización de archivos, ya que
+                        proporcionan una estructura jerárquica para organizar los archivos en carpetas y
+                        subcarpetas. Cada directorio contiene entradas que representan archivos y
+                        subdirectorios, facilitando la navegación por el sistema de archivos.
+                    </p>
 
-                       <ul class="pagination justify-content-end">
+                    <p class="card-text">
+                        Existen diferentes maneras de implementar los directorios:
+                    </p>
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Directorios simples o planos
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        En este esquema, todos los archivos y directorios están en el mismo nivel, lo
+                                        que
+                                        significa que no hay una estructura jerárquica. Este método es sencillo de
+                                        implementar, pero no es práctico para sistemas grandes, ya que encontrar
+                                        archivos
+                                        se vuelve complicado y la gestión de nombres de archivos puede presentar
+                                        conflictos.
+                                    </p>
+                                    <p class="card-text">
+                                        Ejemplo: En un sistema con directorios planos, todos los archivos del sistema
+                                        podrían estar
+                                        en una sola carpeta, como:
+                                    </p>
+                                    <p class="text-center">
+                                        <img src="../images/Ej8.png" class="img-fluid" alt="Ejemplo 8">
+                                    </p>
+                                    <p class="card-text">
+                                        Los archivos se agrupan en carpetas relacionadas, lo que facilita su gestión y
+                                        búsqueda.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Directorios jerárquicos
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Este es el método más común en los sistemas modernos. En una estructura
+                                        jerárquica, los archivos se organizan en carpetas y subcarpetas. Los sistemas
+                                        operativos como Linux, Windows y macOS utilizan este esquema, donde el
+                                        directorio raíz (/ en Linux y C:\ en Windows) contiene otros directorios que a
+                                        su vez
+                                        pueden contener más archivos y carpetas.
+                                    </p>
+                                    <p class="card-text">
+                                        Por ejemplo, una estructura jerárquica podría ser:
+                                    </p>
+                                    <p class="text-center">
+                                        <img src="../images/Ej9.png" class="img-fluid" alt="Ejemplo 9">
+                                    </p>
+                                    <p class="card-text">
+                                        Los archivos se agrupan en carpetas relacionadas, lo que facilita su gestión y
+                                        búsqueda.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Directorios hash
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">Algunos sistemas de archivos utilizan tablas hash para
+                                        almacenar entradas de
+                                        directorios. Esto mejora el rendimiento al buscar archivos dentro de directorios
+                                        muy
+                                        grandes, ya que el uso de un hash permite encontrar rápidamente la entrada
+                                        correcta. Sin embargo, es más complejo de implementar y mantener.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <ul class="pagination justify-content-end">
                         <li class="page-item">
                             <a class="page-link" href="4-1-estructura-del-sistema-de-archivos.html">Anterior</a>
                         </li>

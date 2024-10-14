@@ -56,11 +56,114 @@
 
                 <div class="card-body">
 
-                    <p class="card-text">
-                       En construcción.
-                    </p>
+                    <p class="card-text">La implementación de archivos se centra en cómo el sistema operativo representa
+                        y
+                        gestiona los archivos en el disco. Un archivo no es más que una secuencia de bytes
+                        almacenada en un medio físico, pero el sistema operativo debe mantener
+                        información adicional para facilitar su acceso, como el nombre, el tamaño, los
+                        permisos, las fechas de creación y modificación, y la ubicación en el disco.</p>
+                    <p class="card-text">Los archivos se almacenan en bloques de disco, y la forma en que estos bloques
+                        se
+                        asignan y organizan puede variar según el sistema de archivos. Hay tres métodos
+                        comunes de implementación:</p>
 
-                 
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Asignación contigua
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Los archivos se almacenan en bloques consecutivos en el disco, lo que permite un
+                                        acceso muy rápido, ya que no se requiere saltar entre bloques dispersos. Sin
+                                        embargo, este enfoque sufre de fragmentación externa, lo que significa que
+                                        encontrar un espacio contiguo lo suficientemente grande para nuevos archivos
+                                        puede volverse difícil con el tiempo.
+                                    </p>
+                                    <p class="card-text">
+                                        Ejemplo
+                                    </p>
+                                    <p class="text-center">
+                                        <img src="../images/Ej5.png" class="img-fluid" alt="Ejemplo 5">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Asignación enlazada
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        En este método, los bloques de un archivo están enlazados entre sí mediante
+                                        punteros, lo que permite que los bloques no estén necesariamente contiguos. El
+                                        último bloque de cada archivo contiene un puntero al siguiente bloque,
+                                        facilitando la
+                                        gestión del espacio. Sin embargo, el acceso es más lento, ya que es necesario
+                                        seguir los punteros para leer el archivo completo.
+                                    </p>
+                                    <p class="card-text">
+                                        Por ejemplo, en sistemas operativos como Linux, la estructura jerárquica se
+                                        organiza
+                                        en forma de árbol, donde el directorio raíz (/) es la raíz del sistema de
+                                        archivos, y
+                                        debajo de él se encuentran otros directorios y archivos organizados de manera
+                                        recursiva.
+                                    </p>
+                                    <p class="card-text">
+                                        Ejemplo
+                                    </p>
+                                    <p class="text-center">
+                                        <img src="../images/Ej6.png" class="img-fluid" alt="Ejemplo 6">
+                                    </p>
+                                    <p class="card-text">
+                                        En este ejemplo, los archivos están organizados bajo varios directorios,
+                                        siguiendo una estructura jerárquica clara.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Asignación indexada
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">Los sistemas de archivos modernos, como ext4, utilizan la
+                                        asignación indexada, en
+                                        la que un bloque especial (llamado bloque de índice o inodo) contiene los
+                                        punteros a
+                                        los bloques de datos del archivo. Esto permite un acceso más eficiente y elimina
+                                        la
+                                        necesidad de bloques contiguos o enlaces entre bloques de datos. La
+                                        fragmentación se reduce considerablemente y se optimiza el acceso a los
+                                        archivos.</p>
+                                    <p class="card-text">
+                                        Ejemplo
+                                    </p>
+                                    <p class="text-center">
+                                        <img src="../images/Ej7.png" class="img-fluid" alt="Ejemplo 7">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
@@ -78,9 +181,6 @@
                 </div>
 
             </div>
-
-
-
         </section>
         <!-- Section 1 -->
 
