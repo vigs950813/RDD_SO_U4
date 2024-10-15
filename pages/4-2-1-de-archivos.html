@@ -85,12 +85,19 @@
                                         encontrar un espacio contiguo lo suficientemente grande para nuevos archivos
                                         puede volverse difícil con el tiempo.
                                     </p>
-                                    <p class="card-text">
-                                        Ejemplo
-                                    </p>
-                                    <p class="text-center">
-                                        <img src="../images/Ej5.png" class="img-fluid" alt="Ejemplo 5">
-                                    </p>
+                                    <div class="card">
+                                        <div class="card-header-example">
+                                            Ejemplo
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Si un archivo de 1000 bytes necesita ser almacenado y cada bloque de disco tiene 256 bytes, se necesitan 4
+                                                bloques contiguos para guardar archivo. Si más tarde se intenta agregar otro archivo de 2000 bytes, pero no
+                                                hay espacio contiguo de esa magnitud, el archivo no podrá almacenarse en esa ubicación, incluso si hay
+                                                espacio suficiente en otras partes del disco.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -120,16 +127,18 @@
                                         debajo de él se encuentran otros directorios y archivos organizados de manera
                                         recursiva.
                                     </p>
-                                    <p class="card-text">
-                                        Ejemplo
-                                    </p>
-                                    <p class="text-center">
-                                        <img src="../images/Ej6.png" class="img-fluid" alt="Ejemplo 6">
-                                    </p>
-                                    <p class="card-text">
-                                        En este ejemplo, los archivos están organizados bajo varios directorios,
-                                        siguiendo una estructura jerárquica clara.
-                                    </p>
+                                    <div class="card">
+                                        <div class="card-header-example">
+                                            Ejemplo
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Si un archivo está almacenado en los bloques 10, 25, y 100, el sistema almacena un puntero en el bloque 10 que apunta al
+                                                bloque 25, y otro puntero en el bloque 25 que apunta al bloque 100. Para acceder a todo el archivo, el sistema debe
+                                                seguir estos enlaces.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -152,12 +161,17 @@
                                         necesidad de bloques contiguos o enlaces entre bloques de datos. La
                                         fragmentación se reduce considerablemente y se optimiza el acceso a los
                                         archivos.</p>
-                                    <p class="card-text">
-                                        Ejemplo
-                                    </p>
-                                    <p class="text-center">
-                                        <img src="../images/Ej7.png" class="img-fluid" alt="Ejemplo 7">
-                                    </p>
+                                        <div class="card">
+                                            <div class="card-header-example">
+                                                Ejemplo
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">
+                                                    Supongamos que un archivo está almacenado en los bloques 5, 30, 45, y 70. El sistema de archivos crea un inodo que
+                                                    contiene punteros a estos bloques, y el sistema operativo accede directamente a los bloques a través del inodo.
+                                                </p>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
