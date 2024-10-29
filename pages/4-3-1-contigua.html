@@ -53,14 +53,137 @@
         <section>
             <div class="card">
                 <h5 class="card-header">4.3.1 Contigua</h5>
-
                 <div class="card-body">
-
                     <p class="card-text">
-                        En construcción
-                       </p>
+                        La <strong>asignación contigua</strong> es uno de los métodos más sencillos para almacenar
+                        archivos en el disco. En este esquema, se asigna a cada archivo un conjunto de
+                        bloques consecutivos en el disco. Esto permite un acceso rápido y eficiente, ya que
+                        la lectura secuencial no requiere saltar entre diferentes áreas del disco. Sin
+                        embargo, este método tiene varios inconvenientes, como la fragmentación externa
+                        y la dificultad para encontrar bloques contiguos lo suficientemente grandes para
+                        archivos que crecen con el tiempo.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 1 -->
 
-                       <ul class="pagination justify-content-end">
+        <!-- Section 2 -->
+        <section>
+            <div class="card">
+                <h5 class="card-header">Ventajas</h5>
+                <div class="card-body">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Acceso rápido
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Los archivos se pueden leer de manera secuencial sin
+                                        interrupciones, lo que mejora la velocidad de acceso, especialmente en
+                                        operaciones de lectura secuencial.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Fácil de implementar
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        El sistema solo necesita conocer la dirección del primer
+                                        bloque y la longitud del archivo para acceder a todos los datos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2 -->
+
+        <!-- Section 3 -->
+        <section>
+
+            <div class="card">
+                <h5 class="card-header">Desventajas</h5>
+                <div class="card-body">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Fragmentación externa
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        A medida que los archivos se crean y eliminan, puede
+                                        resultar difícil encontrar un espacio contiguo lo suficientemente grande para
+                                        nuevos archivos o archivos que crecen.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFour">
+                                    Espacio desperdiciado
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Si un archivo aumenta de tamaño, es posible que no
+                                        haya suficiente espacio contiguo, lo que obliga a mover el archivo completo a
+                                        una nueva ubicación, lo que desperdicia recursos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3 -->
+
+        <!-- Section 4 -->
+        <section>
+
+            <div class="card">
+                <h5 class="card-header">Ejemplo</h5>
+                <div class="card-body">
+                    <div class="card-text">
+                        Supongamos que un archivo necesita ocupar 4 bloques consecutivos en el
+                        disco y el sistema de archivos utiliza bloques de 1 KB. Si los bloques 5, 6, 7 y 8
+                        están libres, se pueden asignar contiguamente para almacenar el archivo. Sin
+                        embargo, si más tarde se necesita ampliar el archivo y los bloques consecutivos
+                        ya no están disponibles, será necesario trasladar todo el archivo a una nueva
+                        ubicación.
+                    </div>
+                    <div class="card-text">A continuación se presenta una imagen ilustrativa del ejemplo anterior</div>
+                    <div class="text-center">
+                        <img class="img-fluid" src="../images/Ej10.png" alt="Ejemplo 10">
+                    </div>
+                    <br>
+                    <ul class="pagination justify-content-end">
                         <li class="page-item">
                             <a class="page-link" href="4-2-implementacion.html">Anterior</a>
                         </li>
@@ -70,21 +193,17 @@
                         <li class="page-item"><a class="page-link" href="4-3-2-ligada.html">3</a></li>
                         <li class="page-item"><a class="page-link" href="4-3-3-indexada.html">4</a></li>
                         <li class="page-item"><a class="page-link"
-                                href="4-3-4-administracion-del-espacio-en-disco.html">5</a></li>
+                                href="4-3-4-administracion-del-espacio-en-disco.html">5</a>
+                        </li>
                         </li>
                         <li class="page-item">
                             <a class="page-link" href="4-4-sistemas-de-archivos-estructurados.html">Siguiente Tema</a>
                         </li>
                     </ul>
-
                 </div>
-
             </div>
-
-
-
         </section>
-        <!-- Section 1 -->
+        <!-- Section 4 -->
 
     </main>
 
