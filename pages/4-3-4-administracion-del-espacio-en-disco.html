@@ -19,6 +19,7 @@
     <link href="../css/navbar.css" rel="stylesheet" />
     <link href="../css/card.css" rel="stylesheet" />
     <link href="../css/offcanvas.css" rel="stylesheet" />
+    <link href="../css/acordeon.css" rel="stylesheet" />
     <link href="../css/pagination.css" rel="stylesheet" />
     <link href="../css/footer.css" rel="stylesheet" />
 
@@ -52,32 +53,132 @@
             <div class="card">
                 <h5 class="card-header">4.3.4 Administración del espacio en disco</h5>
                 <div class="card-body">
-                    
-                    <p class="card-text">
-                        En construcción
-                       </p>
 
-                       <ul class="pagination justify-content-end">
+                    <p class="card-text">
+                        La administración del espacio en disco es fundamental para que el sistema
+                        operativo gestione eficientemente los bloques de almacenamiento disponibles.
+                        Existen varias técnicas para administrar los bloques libres y asegurarse de que el
+                        espacio se utilice de manera óptima:
+                    </p>
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Listas enlazadas
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        El sistema mantiene una lista enlazada de todos los bloques libres. Cuando se
+                                        necesita un bloque para un archivo, el sistema toma el primer bloque de la lista
+                                        y lo
+                                        asigna al archivo.
+                                    </p>
+                                    <p class="card-text">
+                                        Por ejemplo, Si el disco tiene bloques libres en las posiciones 5, 10, y 20, el
+                                        sistema de
+                                        archivos puede mantener una lista enlazada como 5 → 10 → 20 . Cuando se
+                                        necesita un bloque, el sistema toma el bloque 5 y actualiza la lista a 10 → 20.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Mapas de bits
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Cada bloque de disco está representado por un bit en un mapa de bits. Un bit en
+                                        “1”
+                                        indica que el bloque está ocupado, mientras que un bit en “0” indica que el
+                                        bloque
+                                        está libre. Este método permite que el sistema de archivos verifique rápidamente
+                                        qué bloques están disponibles y cuáles están en uso.
+                                    </p>
+                                    <p class="card-text">
+                                        A continuación, se presenta un ejemplo.
+                                    </p>
+                                    <div class="text-center">
+                                        <img class="img-fluid" src="" alt="Ejemplo">
+                                    </div>
+                                    <p class="card-text">
+                                        En este caso, los bloques 1, 3, y 7 están ocupados, mientras que los bloques 2,
+                                        4, 5, y 6 están libres.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Bloques de grupo
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Los bloques libres se agrupan en bloques especiales que contienen punteros a
+                                        otros
+                                        bloques libres. Cuando se necesita asignar bloques, se consulta este grupo para
+                                        obtener una lista de bloques libres y asignarlos en lotes, lo que puede mejorar
+                                        la
+                                        eficiencia.
+                                    </p>
+                                    <p class="card-text">
+                                        Por ejemplo, Si se necesita asignar varios bloques a un archivo, el sistema
+                                        puede consultar un
+                                        grupo de bloques que contenga punteros a un conjunto de bloques libres y
+                                        asignar varios a la vez, en lugar de hacerlo uno por uno.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Los métodos de asignación de espacio son esenciales para determinar cómo se
+                        almacenan los archivos en un sistema de archivos. La asignación contigua ofrece
+                        un acceso rápido, pero puede sufrir fragmentación externa; la asignación ligada
+                        resuelve la fragmentación pero introduce acceso más lento; y la asignación
+                        indexada ofrece acceso eficiente y flexible. La administración del espacio en disco
+                        asegura que los bloques libres se gestionen de manera óptima para maximizar la
+                        utilización del espacio y mantener un rendimiento adecuado del sistema de archivos.
+                    </p>
+                    <ul class="pagination justify-content-end">
                         <li class="page-item">
                             <a class="page-link" href="4-2-implementacion.html">Anterior</a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="4-3-metodos-de-asignacion-de-espacio.html">1</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-3-metodos-de-asignacion-de-espacio.html">1</a></li>
                         <li class="page-item"><a class="page-link" href="4-3-1-contigua.html">2</a></li>
                         <li class="page-item"><a class="page-link" href="4-3-2-ligada.html">3</a></li>
                         <li class="page-item"><a class="page-link" href="4-3-3-indexada.html">4</a></li>
-                        <li class="page-item active"><a class="page-link" href="4-3-4-administracion-del-espacio-en-disco.html">5</a></li>
+                        <li class="page-item active"><a class="page-link"
+                                href="4-3-4-administracion-del-espacio-en-disco.html">5</a></li>
                         </li>
                         <li class="page-item">
                             <a class="page-link" href="4-4-sistemas-de-archivos-estructurados.html">Siguiente Tema</a>
-                            </li>
+                        </li>
                     </ul>
-
-
-
                 </div>
+
+            </div>
             </div>
 
         </section>
+
+
     </main>
 
     <!-- Page content -->
