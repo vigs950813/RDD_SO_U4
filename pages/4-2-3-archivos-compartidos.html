@@ -57,17 +57,153 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        En construcción
-                       </p>
+                        La <strong>compartición de archivos</strong> es una característica esencial en sistemas
+                        multiusuario
+                        o en redes, donde diferentes usuarios y aplicaciones pueden necesitar acceder al
+                        mismo archivo simultáneamente. La implementación de archivos compartidos
+                        plantea varios desafíos, como la gestión de permisos, la sincronización de acceso y
+                        la coherencia de los datos. Existen varias formas de implementar archivos
+                        compartidos en un sistema de archivos:
+                    </p>
 
-                       <ul class="pagination justify-content-end">
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Enlaces duros (<i>hard links</i>)
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Un enlace duro es una entrada en el sistema de archivos que apunta al mismo
+                                        inodo
+                                        (es decir, la misma ubicación en disco) que otro archivo. Ambos nombres de
+                                        archivo
+                                        son iguales para el sistema, por lo que cualquier cambio realizado en uno de los
+                                        archivos se refleja automáticamente en el otro. Sin embargo, los enlaces duros
+                                        solo
+                                        pueden crearse en el mismo sistema de archivos.
+                                    </p>
+                                    <p class="card-text">
+                                        En la siguiente Figura 2, se presenta un ejemplo ilustrativo de enlace duro en
+                                        Linux usando el comando ln, ambos archivos comparten el mismo contenido
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Figura 2. Uso de comando ln.</strong>
+                                    </p>
+                                    <p class="text-center">
+                                        <img src="../images/Ej2.png" class="img-fluid" alt="Ejemplo 2">
+                                    </p>
+                                    <p class="card-text">
+                                        El archivo1.txt y enlace_duro.txt son dos nombres que apuntan al mismo
+                                        contenido en el disco.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Enlaces simbólicos (<i>soft links o symlinks</i>)
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Los enlaces simbólicos son archivos que contienen una referencia (puntero) a
+                                        otro
+                                        archivo o directorio. A diferencia de los enlaces duros, los enlaces simbólicos
+                                        pueden apuntar a archivos en diferentes sistemas de archivos o discos. Sin
+                                        embargo, si el archivo original se elimina, el enlace simbólico se vuelve
+                                        inválido (un
+                                        enlace “roto”).
+                                    </p>
+                                    <p class="card-text">
+                                        En la siguiente Figura 3 se presenta un ejemplo de uso del comando ln -s.
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Figura 3. Creación de enlace simbólico en Linux.</strong>
+                                    </p>
+                                    <p class="text-center">
+                                        <img src="../images/Ej3.png" class="img-fluid" alt="Ejemplo 3">
+                                    </p>
+                                    <p class="card-text">
+                                        Dado que enlace_simbolico.txt apunta a archivo1.txt. Si se elimina archivo1.txt,
+                                        el
+                                        enlace simbólico quedará roto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Control de acceso concurrente
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Cuando varios usuarios o procesos acceden simultáneamente a un archivo
+                                        compartido, el sistema de archivos debe implementar mecanismos para evitar
+                                        conflictos y garantizar la coherencia de los datos. Los sistemas de archivos
+                                        suelen
+                                        utilizar <strong>bloqueos de archivos</strong> (<i>file locks</i>) para
+                                        controlar el acceso concurrente. Un
+                                        bloqueo puede ser de lectura o escritura, y asegura que cuando un proceso está
+                                        accediendo al archivo, otros procesos no puedan modificarlo.
+                                    </p>
+                                    <p class="card-text">
+                                        En Linux, se puede utilizar la función flock() para bloquear un archivo y
+                                        garantizar
+                                        que solo un proceso pueda escribir en él en un momento dado, a continuación, se
+                                        presenta la Figura 4 como ejemplo.
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Figura 4. Creación de enlace simbólico en Linux.</strong>
+                                    </p>
+                                    <p class="text-center">
+                                        <img src="../images/Ej4.png" class="img-fluid" alt="Ejemplo 4">
+                                    </p>
+                                    <p class="card-text">
+                                        La implementación del sistema de archivos abarca la gestión eficiente de
+                                        archivos,
+                                        directorios y archivos compartidos. El sistema operativo debe equilibrar el uso
+                                        del
+                                        espacio en disco, el rendimiento y la coherencia de los datos para garantizar un
+                                        acceso rápido y seguro a la información.
+                                    </p>
+                                    <p class="card-text">
+                                        Los métodos como la asignación contigua,
+                                        enlazada e indexada permiten gestionar eficientemente los archivos, mientras que
+                                        los directorios jerárquicos facilitan la organización de los datos. La
+                                        compartición de
+
+                                        archivos se logra mediante enlaces duros, simbólicos y mecanismos de control de
+                                        acceso concurrente, que permiten la colaboración entre usuarios y procesos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="pagination justify-content-end">
                         <li class="page-item">
                             <a class="page-link" href="4-1-estructura-del-sistema-de-archivos.html">Anterior</a>
                         </li>
                         <li class="page-item"><a class="page-link" href="4-2-implementacion.html">1</a></li>
                         <li class="page-item"><a class="page-link" href="4-2-1-de-archivos.html">2</a></li>
                         <li class="page-item"><a class="page-link" href="4-2-2-de-directorios.html">3</a></li>
-                        <li class="page-item active"><a class="page-link" href="4-2-3-archivos-compartidos.html">4</a></li>
+                        <li class="page-item active"><a class="page-link" href="4-2-3-archivos-compartidos.html">4</a>
+                        </li>
                         <li class="page-item">
                             <a class="page-link" href="4-3-metodos-de-asignacion-de-espacio.html">Siguiente Tema</a>
                         </li>
