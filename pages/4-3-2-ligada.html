@@ -53,13 +53,135 @@
         <section>
             <div class="card">
                 <h5 class="card-header">4.3.2 Ligada</h5>
-
                 <div class="card-body">
+                    <p class="card-text">
+                        La <strong>asignación ligada</strong> (o enlazada) resuelve algunos de los problemas de la
+                        asignación contigua al permitir que los bloques de un archivo se almacenen en
+                        cualquier lugar disponible del disco, pero cada bloque contiene un puntero al
+                        siguiente bloque. De este modo, no es necesario que los bloques sean
+                        consecutivos, y el sistema de archivos puede utilizar cualquier espacio libre
+                        disponible.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 1 -->
+
+        <!-- Section 2 -->
+        <section>
+            <div class="card">
+                <h5 class="card-header">Ventajas</h5>
+                <div class="card-body">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Elimina la fragmentación externa
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Los bloques no tienen que ser contiguos, lo
+                                        que facilita la asignación de espacio incluso cuando el disco está muy
+                                        fragmentado.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Expansión dinámica
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Los archivos pueden crecer fácilmente al agregar nuevos
+                                        bloques en cualquier parte del disco.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2 -->
+
+        <!-- Section 3 -->
+        <section>
+            <div class="card">
+                <h5 class="card-header">Desventajas</h5>
+                <div class="card-body">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Acceso más lento
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Para leer o escribir en un archivo, el sistema debe seguir los
+                                        punteros entre los bloques, lo que puede ralentizar las operaciones de acceso.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFour">
+                                    No es adecuado para acceso aleatorio
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Este método es más eficiente para el
+                                        acceso secuencial, pero el acceso aleatorio (lectura de bloques no
+                                        consecutivos) es lento porque requiere recorrer la cadena de punteros.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3 -->
+
+        <!-- Section 4 -->
+        <section>
+
+            <div class="card">
+                <h5 class="card-header">Ejemplo</h5>
+                <div class="card-body">
+                    <div class="card-text">
+                        Si un archivo está almacenado en los bloques 4, 20, y 50, el primer bloque (4)
+                        contendrá un puntero al bloque 20, el bloque 20 contendrá un puntero al bloque
+                        50, y el bloque 50 indicará el final del archivo.
+                    </div>
+                    <div class="card-text">A continuación se presenta una imagen ilustrativa del ejemplo anterior</div>
+                    <div class="text-center">
+                        <img class="img-fluid" src="../images/Ej10.png" alt="Ejemplo 10">
+                    </div>
 
                     <p class="card-text">
-                        En construcción
+                        Este método es muy eficiente para archivos grandes, donde el acceso aleatorio
+                        a los datos es importante.
                     </p>
-
+                    <br>
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
                             <a class="page-link" href="4-2-implementacion.html">Anterior</a>
@@ -70,21 +192,17 @@
                         <li class="page-item active"><a class="page-link" href="4-3-2-ligada.html">3</a></li>
                         <li class="page-item"><a class="page-link" href="4-3-3-indexada.html">4</a></li>
                         <li class="page-item"><a class="page-link"
-                                href="4-3-4-administracion-del-espacio-en-disco.html">5</a></li>
+                                href="4-3-4-administracion-del-espacio-en-disco.html">5</a>
+                        </li>
                         </li>
                         <li class="page-item">
                             <a class="page-link" href="4-4-sistemas-de-archivos-estructurados.html">Siguiente Tema</a>
                         </li>
                     </ul>
-
                 </div>
-
             </div>
-
-
-
         </section>
-        <!-- Section 1 -->
+        <!-- Section 4 -->
 
     </main>
 

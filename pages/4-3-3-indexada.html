@@ -19,6 +19,7 @@
     <link href="../css/navbar.css" rel="stylesheet" />
     <link href="../css/card.css" rel="stylesheet" />
     <link href="../css/offcanvas.css" rel="stylesheet" />
+    <link href="../css/acordeon.css" rel="stylesheet" />
     <link href="../css/pagination.css" rel="stylesheet" />
     <link href="../css/footer.css" rel="stylesheet" />
 
@@ -48,36 +49,180 @@
     <!-- Page content -->
 
     <main>
+        <!-- Section 1 -->
         <section>
             <div class="card">
                 <h5 class="card-header">4.3.3 Indexada</h5>
                 <div class="card-body">
+                    <p class="card-text">
+                        La <strong>asignación indexada</strong> es un método más avanzado que utiliza un bloque especial
+                        llamado <strong>bloque de índice</strong>, que contiene punteros a los bloques de datos del
+                        archivo.
+                        Este enfoque permite un acceso directo a cualquier bloque del archivo, ya que todos
+                        los punteros están en una estructura centralizada (el bloque de índice). Esto elimina
+                        la necesidad de seguir una cadena de punteros entre bloques, como en la
+                        asignación ligada.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 1 -->
+
+        <!-- Section 2 -->
+        <section>
+            <div class="card">
+                <h5 class="card-header">Ventajas</h5>
+                <div class="card-body">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Acceso directo:
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Se puede acceder rápidamente a cualquier bloque del archivo
+                                        utilizando el bloque de índice, lo que mejora el rendimiento en comparación con
+                                        la asignación ligada.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Expansión flexible
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Los archivos pueden crecer sin necesidad de mover otros
+                                        bloques, ya que el bloque de índice puede apuntar a bloques adicionales en
+                                        cualquier lugar del disco.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Robustez
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Si un bloque de datos se corrompe, los demás bloques no se ven
+                                        afectados, ya que no están enlazados entre sí como en la asignación ligada.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2 -->
+
+        <!-- Section 3 -->
+        <section>
+            <div class="card">
+                <h5 class="card-header">Desventajas</h5>
+                <div class="card-body">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseFour">
+                                    Requiere un bloque de índice
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Esto introduce una sobrecarga adicional, ya que
+                                        se necesita espacio adicional para el bloque de índice.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFive">
+                                    Limitaciones de tamaño
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Si el archivo es muy grande, puede ser necesario
+                                        utilizar varios niveles de bloques de índice, lo que complica la gestión del
+                                        archivo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3 -->
+
+        <!-- Section 4 -->
+        <section>
+
+            <div class="card">
+                <h5 class="card-header">Ejemplo</h5>
+                <div class="card-body">
+                    <div class="card-text">
+                        Supongamos que un archivo está dividido en cinco bloques de datos. El sistema
+                        de archivos crea un bloque de índice que contiene los punteros a estos bloques, lo que permite
+                        un acceso directo a cualquier bloque.
+                    </div>
+                    <div class="card-text">A continuación se presenta una imagen ilustrativa del ejemplo anterior</div>
+                    <div class="text-center">
+                        <img class="img-fluid" src="../images/Ej10.png" alt="Ejemplo 10">
+                    </div>
 
                     <p class="card-text">
-                        En construcción
+                        Este método es muy eficiente para archivos grandes, donde el acceso aleatorio
+                        a los datos es importante.
                     </p>
-
+                    <br>
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
                             <a class="page-link" href="4-2-implementacion.html">Anterior</a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="4-3-metodos-de-asignacion-de-espacio.html">1</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-3-metodos-de-asignacion-de-espacio.html">1</a></li>
                         <li class="page-item"><a class="page-link" href="4-3-1-contigua.html">2</a></li>
                         <li class="page-item"><a class="page-link" href="4-3-2-ligada.html">3</a></li>
                         <li class="page-item active"><a class="page-link" href="4-3-3-indexada.html">4</a></li>
-                        <li class="page-item"><a class="page-link" href="4-3-4-administracion-del-espacio-en-disco.html">5</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-3-4-administracion-del-espacio-en-disco.html">5</a>
+                        </li>
                         </li>
                         <li class="page-item">
                             <a class="page-link" href="4-4-sistemas-de-archivos-estructurados.html">Siguiente Tema</a>
-                            </li>
+                        </li>
                     </ul>
-
-
-
                 </div>
             </div>
-
         </section>
+        <!-- Section 4 -->
+
     </main>
 
     <!-- Page content -->
