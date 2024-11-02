@@ -54,8 +54,20 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        En construcción
+                        Contar con un sistema de almacenamiento de información es clave para el funcionamiento diario de cualquier empresa, en especial si se dedica a la venta de productos. La cantidad de datos y assets que llegan a acumularse a lo largo del tiempo (y que crecen a diario) puede convertirse en un verdadero problema si los equipos no utilizan el sistema más adecuado.
+
                        </p>
+
+                       <p class="card-text">
+                        Hay muchas facetas en el ajuste de rendimiento del sistema de archivos:
+                       </p>
+
+                       <ul class="card-text">
+                        <li><strong>Escritura secuencial y aleatoria detrás del ajuste de rendimiento</strong></li>Escribir detrás implica grabar de forma asíncrona páginas modificadas en la memoria en el disco después de alcanzar un umbral en lugar de esperar a que el daemon syncd deseche las páginas en el disco.
+                        <li><strong>Ajuste   del   rendimiento   de   E/S   de   disco   asíncrono </strong></li>Si una aplicación realiza una operación de E/S síncrona, debe esperar a que se complete la E/S. En cambio, las operaciones de E/S asíncronas se ejecutan en segundo plano y no bloquean las aplicaciones de usuario.
+                        <li><strong>Ajuste  del  almacenamiento  intermedio  del  sistema  de  archivos</strong></li>Los siguientes parámetros ioo y vmstat -v pueden ser útiles para detectar cuellos de botella del almacenamiento intermedio de E/S y para ajustar la E/S del disco.
+                        <li><strong>Ajuste	de	entrada y salida (E/S)	directa</strong></li>La principal ventaja de la E/S directa es reducir la utilización de CPU para lecturas y grabaciones de archivos eliminando la copia de la memoria caché de archivos VMM en el almacenamiento intermedio de usuario.
+                       </ul>
 
 
                     <ul class="pagination justify-content-end">

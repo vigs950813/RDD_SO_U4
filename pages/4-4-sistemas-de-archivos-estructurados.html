@@ -19,6 +19,7 @@
     <link href="../css/navbar.css" rel="stylesheet" />
     <link href="../css/card.css" rel="stylesheet" />
     <link href="../css/offcanvas.css" rel="stylesheet" />
+    <link href="../css/acordeon.css" rel="stylesheet" />
     <link href="../css/pagination.css" rel="stylesheet" />
     <link href="../css/footer.css" rel="stylesheet" />
 
@@ -54,9 +55,66 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        En construcción
+                        Los sistemas de archivos estructurados son aquellos que organizan y administran los datos en el almacenamiento de
+                        una manera organizada y predefinida. Estos sistemas permiten a los sistemas operativos realizar un seguimiento
+                        preciso de la ubicación, acceso y gestión de los archivos almacenados en un dispositivo de almacenamiento. Existen
+                        diversos tipos de sistemas de archivos estructurados, cada uno con sus propias características, y pueden
+                        clasificarse en dos categorías principales: sistemas de archivos de bitácora y sistemas de archivos de diario.
                     </p>
 
+                    <p class="card-text">
+                        A continuación se presenta una lista de los sistemas de archivos más comunes de acuerdo a su categoría.
+                    </p>
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                Sistemas de archivos de bitácora
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p class="card-text">
+                                    Son sistemas de archivos estructurados que no mantienen un registro de las operaciones realizadas en el sistema.
+                                Los cambios se aplican directamente al sistema de archivos, lo que hace que la recuperación en caso de fallo sea más
+                                compleja y requiera una revisión completa del sistema.
+                                </p>
+                                <ul class="card-text">
+                                    <li><strong>FAT32</strong></li>Sistema de archivos compatible con múltiples sistemas operativos y adecuado para unidades extraíbles.
+                                    <li><strong>exFAT</strong></li>Optimizado para memorias flash, permite archivos grandes y es compatible en varios dispositivos.
+                                    <li><strong>ext2</strong></li>Sistema de archivos de Linux sin journaling, utilizado en entornos donde no es necesario el registro en diario.
+                                </ul>
+                                
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                              Sistemas de archivos de diario
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p class="card-text">
+                                    Estos sistemas mantienen un registro (diario) de las
+                                operaciones, especialmente de los metadatos.
+                                En caso de fallo, el sistema puede utilizar el diario para restuaruar el estado coherente del sistema de archivos de
+                                manera rápida y confiable.
+                                </p>
+                            </div>
+                            <ul class="card-text">
+                                <li><strong>NTFS</strong></li>Sistema de archivos de Windows con soporte para journaling y permisos avanzados.
+                                <li><strong>ext3</strong></li>Versión de ext2 con journaling, ampliamente utilizada para manejar archivos grandes.
+                                <li><strong>ReiserFS</strong></li>Sistema de archivos de Linux optimizado para manejar grandes cantidades de archivos pequeños.
+                                <li><strong>JFS</strong></li>Sistema de archivos de IBM para Linux, optimizado para servidores con journaling completo.
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br>
 
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
@@ -69,8 +127,6 @@
                             <a class="page-link" href="4-5-optimizacion-del-sistema-de-archivos.html">Siguiente Tema</a>
                         </li>
                     </ul>
-
-
                 </div>
             </div>
 

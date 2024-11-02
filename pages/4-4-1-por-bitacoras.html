@@ -55,8 +55,67 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        En construcción
-                       </p>
+                        Aunque los sistemas de archivos estructurados por registro son una idea interesante, no se
+                        utilizan ampliamente,
+                        debido en parte a su alta incompatibilidad con los sistemas de archivos existentes. Sin embargo,
+                        una de las ideas
+                        inherentes en ellos, la robustez frente a las fallas, se puede aplicar con facilidad a sistemas
+                        de archivos más
+                        convencionales.
+                    </p>
+
+                    <p class="card-text">
+                        La idea básica aquí es mantener un registro de lo que va a realizar el sistema de archivos antes
+                        de hacerlo, por lo
+                        que si el sistema falla antes de poder realizar su trabajo planeado, al momento de re-arrancar
+                        el sistema puede
+                        buscar en el registro para ver lo que estaba ocurriendo al momento de la falla y terminar el
+                        trabajo.
+                    </p>
+
+                    <p class="card-text">
+                        Dichos sistemas de archivos, conocidos como sistemas de archivos por bitácora (<i>Journaling
+                            Files System</i>, JFS), se
+                        encuentran en uso actualmente. El sistema de archivos NTFS de Microsoft, así como los sistemas
+                        ext3 y ReiserFS de
+                        Linux son todos por bitácora.
+                    </p>
+
+                    <p class="card-text">
+                        Para ver la naturaleza del problema, considere una operación simple que ocurre todo el tiempo:
+                        remover un archivo. Esta operación (en UNIX) requiere tres pasos:
+                    </p>
+
+                    <ol class="card-text" type="1">
+                        <li>Quitar el archivo de su directorio.</li>
+                        <li>Liberar el nodo-i y pasarlo a la reserva de nodos-i libres.</li>
+                        <li>Devolver todos los bloques de disco a la reserva de bloques de disco libres.</li>
+                    </ol>
+
+                    <p class="card-text">
+                        En Windows se requieren pasos similares. En la ausencia de fallas del sistema, el orden en el
+                        que se realizan estos pasos no importa; en la presencia de fallas, sí. Suponga que se completa
+                        el primer paso y después el sistema falla.
+                    </p>
+
+                    <p class="card-text">
+                        El nodo-i y los bloques de archivo no estarán accesibles desde ningún archivo, pero tampoco estarán disponibles para
+                        ser reasignados; sólo se encuentran en alguna parte del limbo, disminuyendo los recursos disponibles. Si la falla
+                        ocurre después del siguiente paso, sólo se pierden los bloques.
+                    </p>
+
+                    <p class="card-text">
+                        <strong>Figura XX.</strong>
+                    </p>
+
+                    <p class="card-text">
+                        <i>Sistema de archivos NTFS presente en Windows 10</i>
+                    </p>
+
+                    <div class="text-center">
+                        <img src="" alt="Figura" class="img-fluid">
+                    </div>
+                    
 
                     <br>
 
@@ -64,7 +123,8 @@
                         <li class="page-item">
                             <a class="page-link" href="4-3-metodos-de-asignacion-de-espacio.html">Anterior</a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="4-4-sistemas-de-archivos-estructurados.html">1</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-4-sistemas-de-archivos-estructurados.html">1</a></li>
                         <li class="page-item active"><a class="page-link" href="4-4-1-por-bitacoras.html">2</a></li>
                         <li class="page-item"><a class="page-link" href="4-4-2-por-diario.html">3</a></li>
                         <li class="page-item">

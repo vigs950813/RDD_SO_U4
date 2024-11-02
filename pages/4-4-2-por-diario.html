@@ -55,8 +55,103 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        En construcción
-                       </p>
+                        Un sistema de archivos de registro en diario mantiene un registro de cambios, llamado diario,
+                        que
+                        facilita la recuperación en caso de fallos. Este diario permite que, ante un corte de energía o
+                        fallo
+                        del sistema, el sistema de archivos se restaure rápidamente a un estado coherente, reduciendo la
+                        posibilidad de corrupción de datos.
+                    </p>
+
+                    <p class="card-text">
+                        Este sistema mejora la integridad de los datos y optimiza el proceso de recuperación al evitar
+                        la
+                        necesidad de escanear todo el disco para detectar errores.
+                    </p>
+
+                    <p class="card-text">
+                        Un sistema de archivos de registro por diario permite la recuperación rápida del sistema de
+                        archivos
+                        después de que se produzca una anomalía al registrar los metadatos de los archivos.Si se
+                        habilita el
+                        registro del sistema de archivos, el sistema registra cada cambio en los metadatos del archivo
+                        en un
+                        área reservada del sistema de archivos. Las operaciones de grabación reales se realizan después
+                        de que
+                        se haya completado el registro de los cambios en los metadatos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h5 class="card-header">Beneficios del sistema de archivos con diario</h5>
+                <div class="card-body">
+
+                    <ol class="card-text">
+                        <li><strong>Fiabilidad de los datos</strong></li>Al registrar cambios antes de aplicarlos, se
+                        evita la corrupción de datos en situaciones inesperadas.
+                        <li><strong>Recuperación optimizada</strong></li>Permite restaurar el sistema de archivos
+                        rápidamente tras un fallo, reduciendo el tiempo y complejidad de reparación.
+                        <li><strong>Mejora de rendimiento</strong></li>Algunas implementaciones de <i>journaling</i>
+                        agrupan operaciones para reducir la cantidad de escrituras al disco.
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h5 class="card-header">Modos de registro en diario</h5>
+                <div class="card-body">
+
+                    <ol class="card-text">
+                        <li><strong><i>Write-ahead logging</i></strong></li>Solo registra los metadatos antes de
+                        actualizar el disco, ofreciendo recuperación rápida de la estructura del sistema de archivos.
+                        <li><strong><i>Ordered mode</i></strong></li>Registra tanto metadatos como datos antes de
+                        escribir en el disco, garantizando recuperación completa pero con impacto menor en la velocidad.
+                        <li><strong><i>Data mode</i></strong></li>Registra tanto datos como metadatos antes de cualquier
+                        cambio, ofreciendo máxima recuperación, pero es más lento y ocupa más espacio en disco.
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h5 class="card-header">Desventajas</h5>
+                <div class="card-body">
+
+                    <ol class="card-text">
+                        <li><strong>Consumo de espacio</strong></li>El diario consume espacio adicional en el disco, y
+                        si se realizan muchas operaciones, el tamaño del diario puede afectar el rendimiento.
+                        <li><strong>Impacto en el rendimiento</strong></li>La escritura continua en el diario puede
+                        agregar sobrecarga, especialmente en sistemas con recursos limitados.
+                        <li><strong>Limitaciones en la coherencia de datos de usuario</strong></li>En algunos modos,
+                        solo se garantiza la consistencia de los metadatos, no de los datos del usuario.
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h5 class="card-header">Prácticas recomendadas</h5>
+                <div class="card-body">
+
+                    <ol class="card-text">
+                        <li>Elegir el modo de journaling adecuado en función de la carga de trabajo.</li>
+                        <li>Asignar espacio suficiente para el diario y realizar copias de seguridad regulares.</li>
+                    </ol>
+
+                    <p class="card-text">
+                        <strong>Figura XX.</strong>
+                    </p>
+
+                    <p class="card-text">
+                        <i>Comparación del rendimiento.</i>
+                    </p>
 
                     <br>
 
@@ -64,17 +159,16 @@
                         <li class="page-item">
                             <a class="page-link" href="4-3-metodos-de-asignacion-de-espacio.html">Anterior</a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="4-4-sistemas-de-archivos-estructurados.html">1</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-4-sistemas-de-archivos-estructurados.html">1</a></li>
                         <li class="page-item"><a class="page-link" href="4-4-1-por-bitacoras.html">2</a></li>
                         <li class="page-item active"><a class="page-link" href="4-4-2-por-diario.html">3</a></li>
                         <li class="page-item">
                             <a class="page-link" href="4-5-optimizacion-del-sistema-de-archivos.html">Siguiente Tema</a>
                         </li>
                     </ul>
-
                 </div>
             </div>
-
         </section>
     </main>
 

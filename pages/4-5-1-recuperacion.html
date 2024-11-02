@@ -19,6 +19,7 @@
     <link href="../css/navbar.css" rel="stylesheet" />
     <link href="../css/card.css" rel="stylesheet" />
     <link href="../css/offcanvas.css" rel="stylesheet" />
+    <link href="../css/acordeon.css" rel="stylesheet" />
     <link href="../css/pagination.css" rel="stylesheet" />
     <link href="../css/footer.css" rel="stylesheet" />
 
@@ -52,17 +53,115 @@
             <div class="card">
                 <h5 class="card-header">4.5.1 Recuperación</h5>
                 <div class="card-body">
-
                     <p class="card-text">
-                        En construcción
-                       </p>
+                        Para comprender cómo se pueden recuperar los archivos de un disco, es útil comprender cómo se
+                        almacenan los archivos
+                        en los discos duros antes de que se pierdan.
+                        La mayoría de los sistemas operativos modernos dividen (o "particionan") todo el disco duro
+                        físico en una o varias
+                        partes independientes ("particiones").
+                        En las familias de sistemas operativos basados en DOS / Windows, estas particiones se denominan
+                        "discos lógicos". A
+                        los discos lógicos se les asigna letras de unidad y etiquetas descriptivas opcionales.
+                    </p>
+                    <p class="card-text">
+                        <strong>Figura XX</strong>
+                    </p>
+                    <p class="card-text">
+                        <i>Registro de particiones</i>
+                    </p>
+                    <p class="card-text">
+                        La información sobre archivos y carpetas contiene registros de archivos que almacenan nombres de
+                        archivo, tamaños, fecha/hora y otra información técnica. Esta información también incluye las
+                        ubicaciones físicas exactas (direcciones) de los datos del archivo en el disco. Esta información
+                        generalmente se respalda en la propia unidad, en caso de que la primera copia se dañe.
+                    </p>
+                    <p class="card-text">
+                        Los distintos sistemas de ficheros tienen diferentes formas de almacenar esta información. Por
+                        ejemplo, el sistema de archivos FAT almacena esta información en una tabla de asignación de
+                        archivos (FAT, por sus siglas en inglés), mientras que el sistema de archivos NTFS la almacena
+                        en una tabla de archivos maestra (MFT, por sus siglas en inglés).
+                    </p>
+                    <p class="card-text">
+                        Cuando un ordenador necesita leer un fichero, primero va a la información sobre archivos y
+                        carpetas y busca el registro de ese archivo. Luego, busca la dirección del archivo, va al lugar
+                        especificado en el disco y entonces lee los datos del fichero.
+                    </p>
+                    <p class="card-text">
+                        Cuando un ordenador quiere eliminar un archivo, no destruye sus datos de inmediato. En su lugar,
+                        realiza algunos cambios en la información sobre archivos y carpetas para indicar que el archivo
+                        se ha eliminado. Algunos sistemas operativos simplemente marcan el archivo como eliminado,
+                        conservando todos los metadatos sobre el archivo hasta que sea necesario sobrescribirlo con
+                        metadatos sobre un nuevo archivo. Así es como los sistemas de archivos de Windows manejan las
+                        eliminaciones.
+                    </p>
+                </div>
+            </div>
+        </section>
 
+        <section>
+            <div class="card">
+                <h5 class="card-header">Métodos de recuperación de archivos</h5>
+                <div class="card-body">
+                    <p class="card-text">
+                        Antes de discutir los diferentes métodos para la recuperación de archivos, es importante tener
+                        en cuenta una cosa:
+                        Si los datos del disco se sobrescriben, los datos antiguos se pierden. Ningún programa o método
+                        de recuperación de datos disponible comercialmente puede recuperarlos.
+                        Por eso es de suma importancia que no se escriban archivos nuevos en un disco antes de intentar
+                        la recuperación de datos.
+                    </p>
+                    <p class="card-text">
+                        Para los archivos que no se han sobrescrito, existen dos métodos de recuperación de archivos.
+                        Todo el software de recuperación de datos utiliza una de estas técnicas o ambas.
+                        A continuación se presenta una lista de métodos de recuperación.
+                    </p>
 
-                       <ul class="pagination justify-content-end">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Análisis de información de archivos y carpetas
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Este método intenta recuperar archivos mediante el análisis de la información
+                                        sobre archivos y carpetas. Puede recuperar archivos con sus nombres, rutas,
+                                        marcas de fecha/hora y datos completos si tiene éxito.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Búsqueda de recuperación
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="card-text">
+                                        Busca tipos de archivos conocidos analizando el disco en busca de firmas de
+                                        archvios. Este método es eficaz para recuperar archivos incluso si el primer
+                                        método falla.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <ul class="pagination justify-content-end">
                         <li class="page-item">
                             <a class="page-link" href="4-4-sistemas-de-archivos-estructurados.html">Anterior</a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="4-5-optimizacion-del-sistema-de-archivos.html">1</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-5-optimizacion-del-sistema-de-archivos.html">1</a></li>
                         <li class="page-item active"><a class="page-link" href="4-5-1-recuperacion.html">2</a></li>
                         <li class="page-item"><a class="page-link" href="4-5-2-consistencia.html">3</a></li>
                         <li class="page-item"><a class="page-link" href="4-5-3-rendimiento.html">4</a></li>
@@ -70,12 +169,10 @@
                             <a class="page-link" href="bibliografia.html">bibliografia y recursos</a>
                         </li>
                     </ul>
-
-
                 </div>
             </div>
-
         </section>
+
     </main>
 
     <!-- Page content -->
