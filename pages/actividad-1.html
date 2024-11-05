@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Actividad 1.1: Cuestionario de verdadero y falso de administración de almacenamiento, memoria de
-        intercambio, manejo de memoria con mapa de bits y con listas ligadas</title>
+    <title>Actividad 1: Cuestionario de verdadero y falso general de sistemas de archivos</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap CSS-->
@@ -50,8 +49,7 @@
     <main>
         <section>
             <div class="card">
-                <h3 class="card-header">Actividad 1.1: Cuestionario de verdadero y falso de administración de almacenamiento, memoria de
-                    intercambio, manejo de memoria con mapa de bits y con listas ligadas</h3>
+                <h3 class="card-header">Actividad 1: Cuestionario de verdadero y falso general de sistemas de archivos</h3>
                 <div class="card-body">
 
                     <p class="card-text">
@@ -99,9 +97,9 @@
                                 <b>F</b>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" id="pregunta1">
                             <div class="col" style="text-align: justify;">
-                                La administración eficiente de la memoria es fundamental para el funcionamiento óptimo de los sistemas operativos.
+                                La capa del sistema de archivos gestiona operaciones como crear, modificar, leer y eliminar archivos y directorios.
                             </div>
                             <div class="col">
                                 <input type="checkbox" name="q1" value="v">
@@ -110,9 +108,10 @@
                                 <input type="checkbox" name="q1" value="f">
                             </div>
                         </div>
-                        <div class="row">
+                        
+                        <div class="row" id="pregunta2">
                             <div class="col" style="text-align: justify;">
-                                Desde la gestión de la memoria principal y secundaria ha evolucionado significativamente son importantes para el sistema operativo.
+                                En sistemas operativos UNIX y Linux, las operaciones sobre archivos como abrir y leer se realizan mediante llamadas al sistema como open() y read().
                             </div>
                             <div class="col">
                                 <input type="checkbox" name="q2" value="v">
@@ -121,9 +120,10 @@
                                 <input type="checkbox" name="q2" value="f">
                             </div>
                         </div>
-                        <div class="row">
+                        
+                        <div class="row" id="pregunta3">
                             <div class="col" style="text-align: justify;">
-                                No son importantes para el sistema operativo la paginación, segmentación y el swapping.
+                                La gestión de nombres y directorios permite a los usuarios organizar sus archivos en una estructura plana sin subcarpetas.
                             </div>
                             <div class="col">
                                 <input type="checkbox" name="q3" value="v">
@@ -132,9 +132,10 @@
                                 <input type="checkbox" name="q3" value="f">
                             </div>
                         </div>
-                        <div class="row">
+                        
+                        <div class="row" id="pregunta4">
                             <div class="col" style="text-align: justify;">
-                                Los sistemas operativos deben de ser eficiente en el uso de los recursos de memoria disponible.
+                                En Linux, el sistema de archivos ext4 utiliza bloques de tamaño fijo y asigna espacio contiguo cuando es posible.
                             </div>
                             <div class="col">
                                 <input type="checkbox" name="q4" value="v">
@@ -143,9 +144,10 @@
                                 <input type="checkbox" name="q4" value="f">
                             </div>
                         </div>
-                        <div class="row">
+                        
+                        <div class="row" id="pregunta5">
                             <div class="col" style="text-align: justify;">
-                                Las técnicas no solo optimizan el uso de la memoria, sino que también mejoran el rendimiento general del sistema.
+                                Los metadatos, como los permisos de acceso y fechas de modificación, se almacenan junto con los datos del archivo en el disco.
                             </div>
                             <div class="col">
                                 <input type="checkbox" name="q5" value="v">
@@ -154,9 +156,10 @@
                                 <input type="checkbox" name="q5" value="f">
                             </div>
                         </div>
-                        <div class="row">
+                        
+                        <div class="row" id="pregunta6">
                             <div class="col" style="text-align: justify;">
-                                Abstracción de memoria es un método para organizar la memoria con el sistema operativo y los procesos del usuario activo.
+                                En los sistemas UNIX, los permisos se dividen en tres grupos: propietario, grupo y otros, y especifican lectura, escritura y ejecución.
                             </div>
                             <div class="col">
                                 <input type="checkbox" name="q6" value="v">
@@ -165,52 +168,7 @@
                                 <input type="checkbox" name="q6" value="f">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col" style="text-align: justify;">
-                                La variación establece que la memoria de acceso aleatorio, también conocida como RAM, el sistema operativo puede estar en la parte inferior de la memoria.
-                            </div>
-                            <div class="col">
-                                <input type="checkbox" name="q7" value="v">
-                            </div>
-                            <div class="col">
-                                <input type="checkbox" name="q7" value="f">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col" style="text-align: justify;">
-                                Los sistemas operativos dependen de la gestión de la memoria para que los procesos puedan ejecutarse.
-                            </div>
-                            <div class="col">
-                                <input type="checkbox" name="q8" value="v">
-                            </div>
-                            <div class="col">
-                                <input type="checkbox" name="q8" value="f">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col" style="text-align: justify;">
-                                El sistema de almacenamiento eficiente presenta tres características:  El costo por bit disminuye con el tiempo de acceso, la capacidad aumenta con el costo por unidad y más capacidad significa más tiempo de acceso.
-                            </div>
-                            <div class="col">
-                                <input type="checkbox" name="q9" value="v">
-                            </div>
-                            <div class="col">
-                                <input type="checkbox" name="q9" value="f">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col" style="text-align: justify;">
-                                Los registros del procesador en el nivel superior tienen la memoria más rápida, pero con una menor capacidad y un mayor costo.
-                            </div>
-                            <div class="col">
-                                <input type="checkbox" name="q10" value="v">
-                            </div>
-                            <div class="col">
-                                <input type="checkbox" name="q10" value="f">
-                            </div>
-                        </div>
-
-
+                        
                         <br>
 
 
@@ -246,16 +204,11 @@
                           <a class="page-link" href="../index.html">Anterior</a>
                         </li>
                         <li class="page-item"><a class="page-link" href="introduccion.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="3-1-abstraccion-de-memoria.html">2</a></li>
-                        <li class="page-item"><a class="page-link" href="3-1-1-organizacion-de-la-memoria.html">3</a></li>
-                        <li class="page-item"><a class="page-link" href="3-1-2-administracion-de-almacenamiento.html">4</a></li>
-                        <li class="page-item"><a class="page-link" href="3-1-3-memoria-de-intercambio.html">5</a></li>
-                        <li class="page-item"><a class="page-link" href="3-1-4-manejo-de-memoria-con-mapa-de-bits.html">6</a></li>
-                        <li class="page-item"><a class="page-link" href="3-1-5-manejo-de-memoria-con-listas-ligadas.html">7</a></li>
-                        <li class="page-item active"><a class="page-link" href="actividad-1.html">8</a></li>
-                        <li class="page-item"><a class="page-link" href="actividad-2.html">9</a></li>
+                        <li class="page-item"><a class="page-link" href="4-1-estructura-del-sistema-de-archivos.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="4-1-1-capa-del-sistema-de-archivos.html">3</a></li>
+                        <li class="page-item active"><a class="page-link" href="actividad-1.html">4</a></li>
                         <li class="page-item">
-                          <a class="page-link" href="3-2-memoria-virtual.html">Siguiente Tema</a>
+                          <a class="page-link" href="4-2-implementacion.html">Siguiente Tema</a>
                         </li>
                       </ul>
 

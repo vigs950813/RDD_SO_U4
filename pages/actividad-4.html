@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Actividad 3.1: Cuestionario general de segmentación y sustitución de páginas</title>
+    <title>Actividad 4: Cuestionario de sistemas de archivos estructurados, por bitácora y por diario</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap CSS-->
@@ -49,7 +49,7 @@
     <main>
         <section>
             <div class="card">
-                <h3 class="card-header">Actividad 3.1: Cuestionario general de segmentación y sustitución de páginas
+                <h3 class="card-header">Actividad 4: Cuestionario de sistemas de archivos estructurados, por bitácora y por diario
                 </h3>
                 <div class="card-body">
 
@@ -79,165 +79,114 @@
                     </p>
 
                     <div class="question" style="text-align: justify;">
-                        <h2 style="font-size: 17px; font-weight: bold;">1. ¿Qué son los segmentos lógicos?
-                        </h2>
-                        <input type="radio" name="q1" value="a"> <b>a)</b> En lugar de dividir la memoria física en bloques de tamaño fijo, la
-                        segmentación pura divide el espacio de direcciones en segmentos lógicos que corresponden a diferentes partes del
-                        programa. Estos segmentos pueden incluir código de programa, datos globales, pila de ejecución, etc.<br>
-                        <input type="radio" name="q1" value="b"> <b>b)</b> Las direcciones en sistemas segmentados constan de dos partes: un número
-                        de segmento y un desplazamiento dentro de ese segmento. Esto permite que cada segmento se procese de forma
-                        independiente para la protección y la gestión del almacenamiento.<br>
-                        <input type="radio" name="q1" value="c"> <b>c)</b> Cada proceso tiene una tabla de segmentos que contiene la base y los
-                        límites de cada segmento. La base es la dirección inicial del segmento en la memoria física y el límite define el
-                        tamaño del segmento.<br>
-                        <input type="radio" name="q1" value="d"> <b>d)</b> La segmentación permite una protección detallada de la memoria al
-                        permitir que cada segmento tenga sus propios permisos (lectura, escritura, ejecución). Además, facilita compartir
-                        segmentos entre procesos, como código en bibliotecas compartidas.<br>
+                        <h2 style="font-size: 17px; font-weight: bold;">1. ¿Qué es un sistema de archivos estructurado?</h2>
+                        <input type="radio" name="q1" value="a"> <b>a)</b> Un método para organizar datos sin ninguna estructura.<br>
+                        <input type="radio" name="q1" value="b"> <b>b)</b> Un método que organiza los datos en una jerarquía o estructura definida.<br>
+                        <input type="radio" name="q1" value="c"> <b>c)</b> Un sistema que solo permite el acceso a archivos de texto.<br>
+                        <input type="radio" name="q1" value="d"> <b>d)</b> Un sistema que no utiliza índices para la búsqueda de archivos.<br>
+                        <span id="feedback-q1"></span>
                     </div>
-                    
                     <br>
-
+                    
                     <div class="question" style="text-align: justify;">
-                        <h2 style="font-size: 17px; font-weight: bold;">2. ¿Qué son las Direcciones Segmentadas?</h2>
-                        <input type="radio" name="q2" value="a"> <b>a)</b> En lugar de dividir la memoria física en bloques de tamaño fijo, la
-                        segmentación pura divide el espacio de direcciones en segmentos lógicos que corresponden a diferentes partes del
-                        programa. Estos segmentos pueden incluir código de programa, datos globales, pila de ejecución, etc.<br>
-                        <input type="radio" name="q2" value="b"> <b>b)</b> Las direcciones en sistemas segmentados constan de dos partes: un número
-                        de segmento y un desplazamiento dentro de ese segmento. Esto permite que cada segmento se procese de forma
-                        independiente para la protección y la gestión del almacenamiento.<br>
-                        <input type="radio" name="q2" value="c"> <b>c)</b> Cada proceso tiene una tabla de segmentos que contiene la base y los
-                        límites de cada segmento. La base es la dirección inicial del segmento en la memoria física y el límite define el
-                        tamaño del segmento.<br>
-                        <input type="radio" name="q2" value="d"> <b>d)</b> La segmentación permite una protección detallada de la memoria al
-                        permitir que cada segmento tenga sus propios permisos (lectura, escritura, ejecución). Además, facilita compartir
-                        segmentos entre procesos, como código en bibliotecas compartidas.<br>
+                        <h2 style="font-size: 17px; font-weight: bold;">2. ¿Cuál es la principal ventaja de utilizar un sistema de archivos estructurado?</h2>
+                        <input type="radio" name="q2" value="a"> <b>a)</b> La posibilidad de almacenar datos en múltiples formatos.<br>
+                        <input type="radio" name="q2" value="b"> <b>b)</b> La mejora en la velocidad de acceso y organización de los datos.<br>
+                        <input type="radio" name="q2" value="c"> <b>c)</b> La capacidad de evitar la duplicación de archivos.<br>
+                        <input type="radio" name="q2" value="d"> <b>d)</b> El uso de menos espacio en disco.<br>
                         <span id="feedback-q2"></span>
                     </div>
                     <br>
-
+                    
                     <div class="question" style="text-align: justify;">
-                        <h2 style="font-size: 17px; font-weight: bold;">3. ¿Qué son las Tablas de Segmentos?
-                        </h2>
-                        <input type="radio" name="q3" value="a"> <b>a)</b> En lugar de dividir la memoria física en bloques de tamaño fijo, la
-                        segmentación pura divide el espacio de direcciones en segmentos lógicos que corresponden a diferentes partes del
-                        programa. Estos segmentos pueden incluir código de programa, datos globales, pila de ejecución, etc.<br>
-                        <input type="radio" name="q3" value="b"> <b>b)</b> Las direcciones en sistemas segmentados constan de dos partes: un número
-                        de segmento y un desplazamiento dentro de ese segmento. Esto permite que cada segmento se procese de forma
-                        independiente para la protección y la gestión del almacenamiento.<br>
-                        <input type="radio" name="q3" value="c"> <b>c)</b> Cada proceso tiene una tabla de segmentos que contiene la base y los
-                        límites de cada segmento. La base es la dirección inicial del segmento en la memoria física y el límite define el
-                        tamaño del segmento.<br>
-                        <input type="radio" name="q3" value="d"> <b>d)</b> La segmentación permite una protección detallada de la memoria al
-                        permitir que cada segmento tenga sus propios permisos (lectura, escritura, ejecución). Además, facilita compartir
-                        segmentos entre procesos, como código en bibliotecas compartidas.<br>
+                        <h2 style="font-size: 17px; font-weight: bold;">3. ¿Qué función cumplen las bitácoras en un sistema de archivos?</h2>
+                        <input type="radio" name="q3" value="a"> <b>a)</b> Facilitan la compresión de archivos.<br>
+                        <input type="radio" name="q3" value="b"> <b>b)</b> Registran cambios y operaciones realizadas sobre los archivos.<br>
+                        <input type="radio" name="q3" value="c"> <b>c)</b> Aumentan la seguridad de los archivos mediante cifrado.<br>
+                        <input type="radio" name="q3" value="d"> <b>d)</b> Mejoran la estética visual del sistema de archivos.<br>
                         <span id="feedback-q3"></span>
                     </div>
                     <br>
-
+                    
                     <div class="question" style="text-align: justify;">
-                        <h2 style="font-size: 17px; font-weight: bold;">4. ¿Qué son la Protección y Comparación?</h2>
-                        <input type="radio" name="q4" value="a"> <b>a)</b> En lugar de dividir la memoria física en bloques de tamaño fijo, la
-                        segmentación pura divide el espacio de direcciones en segmentos lógicos que corresponden a diferentes partes del
-                        programa. Estos segmentos pueden incluir código de programa, datos globales, pila de ejecución, etc.<br>
-                        <input type="radio" name="q4" value="b"> <b>b)</b> Las direcciones en sistemas segmentados constan de dos partes: un número
-                        de segmento y un desplazamiento dentro de ese segmento. Esto permite que cada segmento se procese de forma
-                        independiente para la protección y la gestión del almacenamiento.<br>
-                        <input type="radio" name="q4" value="c"> <b>c)</b> Cada proceso tiene una tabla de segmentos que contiene la base y los
-                        límites de cada segmento. La base es la dirección inicial del segmento en la memoria física y el límite define el
-                        tamaño del segmento.<br>
-                        <input type="radio" name="q4" value="d"> <b>d)</b> La segmentación permite una protección detallada de la memoria al
-                        permitir que cada segmento tenga sus propios permisos (lectura, escritura, ejecución). Además, facilita compartir
-                        segmentos entre procesos, como código en bibliotecas compartidas.<br>
+                        <h2 style="font-size: 17px; font-weight: bold;">4. En un sistema de archivos, ¿qué es un diario?</h2>
+                        <input type="radio" name="q4" value="a"> <b>a)</b> Un archivo que almacena datos temporales.<br>
+                        <input type="radio" name="q4" value="b"> <b>b)</b> Un registro secuencial de cambios en un sistema de archivos.<br>
+                        <input type="radio" name="q4" value="c"> <b>c)</b> Un tipo de archivo que solo contiene texto.<br>
+                        <input type="radio" name="q4" value="d"> <b>d)</b> Un medio para almacenar archivos multimedia.<br>
                         <span id="feedback-q4"></span>
                     </div>
-                    
                     <br>
-
+                    
                     <div class="question" style="text-align: justify;">
-                        <h2 style="font-size: 17px; font-weight: bold;">5. ¿Qué es la Segmentación con paginación?</h2>
-                        <input type="radio" name="q5" value="a"> <b>a)</b> Reducción de la fragmentación externa y la posibilidad de una protección
-                        y compartición de memoria más granular.<br>
-                        <input type="radio" name="q5" value="b"> <b>b)</b> Las direcciones en sistemas segmentados constan de dos partes: un número
-                        de segmento y un desplazamiento dentro de ese segmento. Esto permite que cada segmento se procese de forma
-                        independiente para la protección y la gestión del almacenamiento.<br>
-                        <input type="radio" name="q5" value="c"> <b>c)</b> Cada proceso tiene una tabla de segmentos que contiene la base y los
-                        límites de cada segmento. La base es la dirección inicial del segmento en la memoria física y el límite define el
-                        tamaño del segmento.<br>
+                        <h2 style="font-size: 17px; font-weight: bold;">5. ¿Qué tipo de información se suele registrar en una bitácora?</h2>
+                        <input type="radio" name="q5" value="a"> <b>a)</b> Solo cambios en archivos de texto.<br>
+                        <input type="radio" name="q5" value="b"> <b>b)</b> Actividades de los usuarios, acceso a archivos y cambios realizados.<br>
+                        <input type="radio" name="q5" value="c"> <b>c)</b> Información sobre la estructura del sistema de archivos.<br>
+                        <input type="radio" name="q5" value="d"> <b>d)</b> Datos redundantes de todos los archivos.<br>
                         <span id="feedback-q5"></span>
                     </div>
-                    
                     <br>
-
+                    
                     <div class="question" style="text-align: justify;">
-                        <h2 style="font-size: 17px; font-weight: bold;">6. ¿Qué se requiere para implementar la segmentación mediante la
-                            paginación?</h2>
-                        <input type="radio" name="q6" value="a"> <b>a)</b> En lugar de dividir la memoria física en bloques de tamaño fijo, la
-                        segmentación pura divide el espacio de direcciones en segmentos lógicos que corresponden a diferentes partes del
-                        programa. Estos segmentos pueden incluir código de programa, datos globales, pila de ejecución, etc.<br>
-                        <input type="radio" name="q6" value="b"> <b>b)</b> Las direcciones en sistemas segmentados constan de dos partes: un número
-                        de segmento y un desplazamiento dentro de ese segmento. Esto permite que cada segmento se procese de forma
-                        independiente para la protección y la gestión del almacenamiento.<br>
-                        <input type="radio" name="q6" value="c"> <b>c)</b> Cada proceso tiene una tabla de segmentos que contiene la base y los
-                        límites de cada segmento. La base es la dirección inicial del segmento en la memoria física y el límite define el
-                        tamaño del segmento.<br>
-                        <input type="radio" name="q6" value="d"> <b>d)</b> Se utilizan tanto tablas de segmentos como tablas de varias páginas. La
-                        tabla de segmentos mantiene información sobre cada segmento, incluida su base y límites, y un puntero a la tabla de
-                        páginas correspondiente. Cada segmento tiene su propia tabla de páginas que gestiona la traducción de direcciones
-                        dentro de ese segmento.<br>
+                        <h2 style="font-size: 17px; font-weight: bold;">6. ¿Cuál es una desventaja de los sistemas de archivos estructurados?</h2>
+                        <input type="radio" name="q6" value="a"> <b>a)</b> Permiten un fácil acceso a los datos.<br>
+                        <input type="radio" name="q6" value="b"> <b>b)</b> Pueden requerir un mayor tiempo de configuración y mantenimiento.<br>
+                        <input type="radio" name="q6" value="c"> <b>c)</b> Facilitan la recuperación de datos perdidos.<br>
+                        <input type="radio" name="q6" value="d"> <b>d)</b> Son más seguros que los sistemas no estructurados.<br>
                         <span id="feedback-q6"></span>
                     </div>
-                    
                     <br>
-
+                    
                     <div class="question" style="text-align: justify;">
-                        <h2 style="font-size: 17px; font-weight: bold;">7. ¿Por qué es importante la segmentación de la memoria?
-                        </h2>
-                        <input type="radio" name="q7" value="a"> <b>a)</b> La segmentación de memoria proporciona una forma flexible y eficiente de
-                        administrar, lo que facilita proteger, compartir y administrar dinámicamente recursos de memoria para programas
-                        complejos de varios niveles.<br>
-                        <input type="radio" name="q7" value="b"> <b>b)</b> En lugar de dividir la memoria física en bloques de tamaño fijo, la
-                        segmentación pura divide el espacio de direcciones en segmentos lógicos que corresponden a diferentes partes del
-                        programa. Estos segmentos pueden incluir código de programa, datos globales, pila de ejecución, etc.<br>
-                        <input type="radio" name="q7" value="c"> <b>c)</b> Las direcciones en sistemas segmentados constan de dos partes: un número
-                        de segmento y un desplazamiento dentro de ese segmento. Esto permite que cada segmento se procese de forma
-                        independiente para la protección y la gestión del almacenamiento.<br>
+                        <h2 style="font-size: 17px; font-weight: bold;">7. ¿Qué se entiende por fragmentación en un sistema de archivos?</h2>
+                        <input type="radio" name="q7" value="a"> <b>a)</b> El proceso de organizar los archivos de forma continua en disco.<br>
+                        <input type="radio" name="q7" value="b"> <b>b)</b> La división de un archivo en partes no contiguas.<br>
+                        <input type="radio" name="q7" value="c"> <b>c)</b> La eliminación de archivos innecesarios.<br>
+                        <input type="radio" name="q7" value="d"> <b>d)</b> La combinación de archivos pequeños en uno más grande.<br>
                         <span id="feedback-q7"></span>
                     </div>
-                   
                     <br>
-
+                    
                     <div class="question" style="text-align: justify;">
-                        <h2 style="font-size: 17px; font-weight: bold;">8. ¿Cómo se dividen los programas de segmentación en el usuario?
-                        </h2>
-                        <input type="radio" name="q8" value="a"> <b>a)</b> En lugar de dividir la memoria física en bloques de tamaño fijo, la
-                        segmentación pura divide el espacio de direcciones en segmentos lógicos que corresponden a diferentes partes del
-                        programa. Estos segmentos pueden incluir código de programa, datos globales, pila de ejecución, etc.<br>
-                        <input type="radio" name="q8" value="b"> <b>b)</b> Las direcciones en sistemas segmentados constan de dos partes: un número
-                        de segmento y un desplazamiento dentro de ese segmento. Esto permite que cada segmento se procese de forma
-                        independiente para la protección y la gestión del almacenamiento.<br>
-                        <input type="radio" name="q8" value="c"> <b>c)</b> Divide el programa y sus datos asociados en múltiples segmentos. Hay un
-                        límite en la longitud máxima de un segmento, pero no es necesario que todos los programas tengan la misma longitud.
-                        De manera similar a la paginación, con segmentación, una dirección lógica consta de dos partes, en este caso un
-                        número de segmento y un desplazamiento.<br>
+                        <h2 style="font-size: 17px; font-weight: bold;">8. ¿Cómo se diferencia un diario de una bitácora?</h2>
+                        <input type="radio" name="q8" value="a"> <b>a)</b> Un diario registra solo errores, mientras que una bitácora registra todo.<br>
+                        <input type="radio" name="q8" value="b"> <b>b)</b> Ambos son lo mismo; no hay diferencia.<br>
+                        <input type="radio" name="q8" value="c"> <b>c)</b> Un diario es más formal y se usa para fines legales, mientras que una bitácora es más técnica.<br>
+                        <input type="radio" name="q8" value="d"> <b>d)</b> Un diario registra cambios de forma cronológica, mientras que una bitácora registra eventos significativos.<br>
                         <span id="feedback-q8"></span>
                     </div>
-                  
                     <br>
-
+                    
                     <div class="question" style="text-align: justify;">
-                        <h2 style="font-size: 17px; font-weight: bold;">9. ¿Qué importancia tiene la segmentación?</h2>
-                        <input type="radio" name="q9" value="a"> <b>a)</b> En lugar de dividir la memoria física en bloques de tamaño fijo, la
-                        segmentación pura divide el espacio de direcciones en segmentos lógicos que corresponden a diferentes partes del
-                        programa. Estos segmentos pueden incluir código de programa, datos globales, pila de ejecución, etc.<br>
-                        <input type="radio" name="q9" value="b"> <b>b)</b> Las direcciones en sistemas segmentados constan de dos partes: un número
-                        de segmento y un desplazamiento dentro de ese segmento. Esto permite que cada segmento se procese de forma
-                        independiente para la protección y la gestión del almacenamiento.<br>
-                        <input type="radio" name="q9" value="c"> <b>c)</b> Es una técnica avanzada de gestión de memoria en sistemas operativos que
-                        permite dividir el espacio de direcciones lógicas de un proceso en segmentos de tamaño variable, representando cada
-                        segmento una unidad lógica y semántica del programa.<br>
-                        <span id="feedback-q8"></span>
+                        <h2 style="font-size: 17px; font-weight: bold;">9. ¿Qué tipo de sistemas de archivos utilizan un enfoque de journaling?</h2>
+                        <input type="radio" name="q9" value="a"> <b>a)</b> Sistemas que solo utilizan almacenamiento en disco.<br>
+                        <input type="radio" name="q9" value="b"> <b>b)</b> Sistemas que registran cambios antes de aplicarlos para evitar pérdidas.<br>
+                        <input type="radio" name="q9" value="c"> <b>c)</b> Sistemas que no requieren estructura.<br>
+                        <input type="radio" name="q9" value="d"> <b>d)</b> Sistemas que solo utilizan archivos de texto.<br>
+                        <span id="feedback-q9"></span>
                     </div>
-                   
+                    <br>
+                    
+                    <div class="question" style="text-align: justify;">
+                        <h2 style="font-size: 17px; font-weight: bold;">10. ¿Por qué es importante el mantenimiento de las bitácoras y diarios en un sistema de archivos?</h2>
+                        <input type="radio" name="q10" value="a"> <b>a)</b> Para mejorar la estética del sistema.<br>
+                        <input type="radio" name="q10" value="b"> <b>b)</b> Para asegurar la integridad y la disponibilidad de los datos.<br>
+                        <input type="radio" name="q10" value="c"> <b>c)</b> Para reducir el espacio de almacenamiento utilizado.<br>
+                        <input type="radio" name="q10" value="d)"> <b>d)</b> Para facilitar la edición de archivos.<br>
+                        <span id="feedback-q10"></span>
+                    </div>
+                    <br>
+                    
+                    <div class="question" style="text-align: justify;">
+                        <h2 style="font-size: 17px; font-weight: bold;">11. ¿Qué herramienta se puede utilizar para analizar los registros de una bitácora?</h2>
+                        <input type="radio" name="q11" value="a"> <b>a)</b> Un editor de texto.<br>
+                        <input type="radio" name="q11" value="b"> <b>b)</b> Un software de análisis de logs.<br>
+                        <input type="radio" name="q11" value="c"> <b>c)</b> Un sistema de compresión de archivos.<br>
+                        <input type="radio" name="q11" value="d"> <b>d)</b> Un gestor de bases de datos.<br>
+                        <span id="feedback-q11"></span>
+                    </div>
+                    
                     <br>
 
                     <div class="container text-center">
@@ -259,17 +208,12 @@
 
                     
                     <ul class="pagination justify-content-end">
-                        <li class="page-item">
-                            <a class="page-link" href="3-2-memoria-virtual.html">Anterior</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="3-3-segmentacion.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="3-3-1-implementacion-de-la-segmentacion-pura.html">2</a></li>
-                        <li class="page-item"><a class="page-link" href="3-3-2-segmentacion-por-paginacion.html">3</a>
-                        <li class="page-item active"><a class="page-link" href="actividad-4.html">4</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="bibliografia.html">Lista de referencias bibliográficas</a>
-                        </li>
+                        <li class="page-item"><a class="page-link" href="4-3-metodos-de-asignacion-de-espacio.html">Anterior</a></li>
+                        <li class="page-item"><a class="page-link" href="4-4-sistemas-de-archivos-estructurados.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="4-4-1-por-bitacoras.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="4-4-2-por-diario.html">3</a>
+                        <li class="page-item active"><a class="page-link" href="actividad-4.html">4</a></li>
+                        <li class="page-item"><a class="page-link" href="4-5-optimizacion-del-sistema-de-archivos.html">Siguiente Tema</a></li>
                     </ul>
 
                 </div>
