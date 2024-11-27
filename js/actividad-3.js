@@ -34,23 +34,16 @@ function checkAnswers() {
     }
 
     // Validar preguntas de opción múltiple
-    checkAnswer('q1', 'd', 'feedback-q1', 'Los métodos de asignación de espacio son: Ligada, Virtual y Segmentada. <br>Respuesta correcta: d)');
-    checkAnswer('q2', 'a', 'feedback-q2', 'La estructura básica del fichero ejecutable es: Cabecera y Secciones. <br>Respuesta correcta: a)');
-    checkAnswer('q3', 'c', 'feedback-q3', 'En un sistema monoprogramado, la memoria principal se divide entre el sistema operativo y el programa que se ejecuta en ese instante. <br>Respuesta correcta: c)');
-    checkAnswer('q4', 'a', 'feedback-q4', 'La técnica de gestión que introduce fragmentación externa es la Segmentación. <br>Respuesta correcta: a)');
-    checkAnswer('q5', 'b', 'feedback-q5', 'Una técnica de manejo de memoria que divide el espacio en secciones físicas de igual tamaño es la Paginación. <br>Respuesta correcta: b)');
-    checkAnswer('q6', 'a', 'feedback-q6', 'En segmentación, una dirección lógica consta de un número de segmento y desplazamiento. <br>Respuesta correcta: a)');
-    checkAnswer('q7', 'b', 'feedback-q7', 'Se asume que la latencia de acceso de la zona de memoria swap es mucho mayor que la de memoria principal. <br>Respuesta correcta: b)');
-
+    checkAnswer('q1', 'b', 'feedback-q1', 'Las capas de software facilitan la interacción entre el hardware y las aplicaciones de usuario. <br>Respuesta correcta: b)');
+    checkAnswer('q2', 'c', 'feedback-q2', 'El manejador de interrupciones se encarga de gestionar las solicitudes de entrada y salida a nivel de hardware. <br>Respuesta correcta: c)');
+    checkAnswer('q3', 'b', 'feedback-q3', 'La función principal del manejador de interrupciones es responder rápidamente a los eventos de hardware. <br>Respuesta correcta: b)');
+    checkAnswer('q4', 'b', 'feedback-q4', 'Cuando ocurre una interrupción, el sistema ejecuta el manejador de interrupciones correspondiente. <br>Respuesta correcta: b)');
+    checkAnswer('q5', 'b', 'feedback-q5', 'Los controladores de dispositivos traducen las solicitudes de entrada y salida del sistema operativo al hardware. <br>Respuesta correcta: b)');
+    checkAnswer('q6', 'a', 'feedback-q6', 'Un controlador de dispositivo puede ser, por ejemplo, un controlador de teclado. <br>Respuesta correcta: a)');
+    checkAnswer('q7', 'b', 'feedback-q7', 'El software en modo usuario utiliza llamadas al sistema para realizar operaciones de entrada y salida. <br>Respuesta correcta: b)');
+    
     // Validar preguntas de texto
-    checkAnswer('q8', 'gestionar la asignación de memoria virtual', 'feedback-q8', 'El propósito de la tabla de páginas es gestionar la asignación de memoria virtual. <br>Respuesta correcta: Gestionar la asignación de memoria virtual');
-    checkAnswer('q9', 'asociar direcciones virtuales a físicas', 'feedback-q9', 'La función de las tablas de páginas es asociar direcciones virtuales a físicas. <br>Respuesta correcta: Asociar direcciones virtuales a físicas');
-    checkAnswer('q10', 'permite ejecutar programas más grandes que la memoria física', 'feedback-q10', 'La memoria virtual permite ejecutar programas más grandes que la memoria física, almacenando temporalmente datos en el disco. <br>Respuesta correcta: Permite ejecutar programas más grandes que la memoria física');
-
-    // Validar pregunta verdadero/falso
-    checkAnswer('q11', 'v', 'feedback-q11', 'La segmentación facilita la compartición de procedimiento entre usuarios. <br>Respuesta correcta: Verdadero');
-
-    // Puedes mostrar el número total de respuestas correctas si lo deseas
-    //console.log(`Respuestas correctas: ${correctCount}`);
-    //console.log(`Respuestas incorrectas: ${incorrectCount}`);
+    checkAnswer('q8', 'mayor seguridad y control', 'feedback-q8', 'El uso de llamadas al sistema permite un mayor control y seguridad en las operaciones de entrada y salida. <br>Respuesta correcta: Mayor seguridad y control');
+    checkAnswer('q9', 'la falta de acceso directo al hardware', 'feedback-q9', 'El software en modo usuario no tiene acceso directo al hardware, lo que limita algunas operaciones. <br>Respuesta correcta: La falta de acceso directo al hardware');
+    checkAnswer('q10', 'se utiliza un controlador de dispositivo', 'feedback-q10', 'Cuando el software en modo usuario solicita entrada y salida, se utiliza un controlador de dispositivo para procesar la solicitud. <br>Respuesta correcta: Se utiliza un controlador de dispositivo');
 }
