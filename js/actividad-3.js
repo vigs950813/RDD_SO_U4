@@ -43,7 +43,13 @@ function checkAnswers() {
     checkAnswer('q7', 'b', 'feedback-q7', 'El software en modo usuario utiliza llamadas al sistema para realizar operaciones de entrada y salida. <br>Respuesta correcta: b)');
     
     // Validar preguntas de texto
-    checkAnswer('q8', 'mayor seguridad y control', 'feedback-q8', 'El uso de llamadas al sistema permite un mayor control y seguridad en las operaciones de entrada y salida. <br>Respuesta correcta: Mayor seguridad y control');
-    checkAnswer('q9', 'la falta de acceso directo al hardware', 'feedback-q9', 'El software en modo usuario no tiene acceso directo al hardware, lo que limita algunas operaciones. <br>Respuesta correcta: La falta de acceso directo al hardware');
-    checkAnswer('q10', 'se utiliza un controlador de dispositivo', 'feedback-q10', 'Cuando el software en modo usuario solicita entrada y salida, se utiliza un controlador de dispositivo para procesar la solicitud. <br>Respuesta correcta: Se utiliza un controlador de dispositivo');
+    checkAnswer('q8', 'flexibilidad y reducción de fragmentación', 'feedback-q8', 
+        'La asignación ligada permite flexibilidad y reduce la fragmentación externa. <br>Respuesta correcta: Flexibilidad y reducción de fragmentación. <br>Retroalimentación: Respondiste incorrectamente porque no consideraste cómo se optimiza la memoria al no requerir bloques contiguos.');
+        
+        checkAnswer('q9', 'fragmentación externa', 'feedback-q9', 
+        'La asignación indexada elimina la fragmentación externa y permite bloques no contiguos. <br>Respuesta correcta: Fragmentación externa. <br>Retroalimentación: Tu respuesta fue incorrecta porque no mencionaste la capacidad de almacenar datos de forma dispersa.');
+        
+        checkAnswer('q10', 'almacenamiento en bloques contiguos', 'feedback-q10', 
+        'La asignación contigua almacena datos en bloques contiguos, simplificando el acceso secuencial. <br>Respuesta correcta: Almacenamiento en bloques contiguos. <br>Retroalimentación: Respondiste mal porque no mencionaste que requiere bloques de memoria adyacentes, lo que puede causar fragmentación.');
+        
 }
