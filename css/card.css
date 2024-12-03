@@ -13,6 +13,14 @@
     color: white;
 }
 
+.card-header.concept{
+    background-color: #307BCF;
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
 .card-header-example{
     background-color: #e5eff9;
     text-align: center;

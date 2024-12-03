@@ -57,34 +57,232 @@
         <div class="card-body">
 
           <p class="card-text">
-            El <strong>sistema de archivos</strong> es una parte fundamental de cualquier sistema operativo, ya
-            que es responsable de gestionar cómo se almacenan, organizan, y manipulan los
-            datos en los dispositivos de almacenamiento. Los sistemas de archivos permiten
-            que los usuarios y las aplicaciones interactúen con los datos de manera
-            estructurada, mediante la asignación de nombres a los archivos y directorios, la
-            asignación de espacio en disco, y la implementación de permisos y políticas de
-            acceso. La estructura del sistema de archivos se compone de varias capas que
-            facilitan estas funciones, permitiendo al sistema operativo gestionar eficientemente
-            la información almacenada.
+            El sistema de archivos es una parte fundamental de cualquier sistema operativo, ya que es responsable de
+            gestionar cómo se almacenan, organizan, y manipulan los datos en los dispositivos de almacenamiento. Los
+            sistemas de archivos permiten que los usuarios y las aplicaciones interactúen con los datos de manera
+            estructurada, mediante la asignación de nombres a los archivos y directorios, la asignación de espacio en
+            disco, y la implementación de permisos y políticas de acceso. La estructura del sistema de archivos se
+            compone de varias capas que facilitan estas funciones, permitiendo al sistema operativo gestionar
+            eficientemente la información almacenada.
           </p>
 
-        
+          <p class="card-text"><strong>Nomenclatura de archivos</strong></p>
+
+          <p class="card-text">
+            Los archivos son un mecanismo de abstracción. Ofrecen una forma de guardar información en el disco y
+            recuperarla más tarde. Esto debe hacerse de forma que proteja al usuario de los detalles de cómo y dónde se
+            almacena la información y cómo funcionan realmente los discos. Probablemente, la característica más
+            importante de cualquier mecanismo de abstracción sea la manera en que los objetos administrados son
+            denominados, por lo que empezaremos nuestro aprendizaje de los sistemas de archivos con el tema de la
+            nomenclatura de los archivos. Cuando un proceso crea un archivo le proporciona un nombre. Cuando el proceso
+            termina, el archivo continúa existiendo y puede ser utilizado por otros procesos mediante su nombre.
+          </p>
+
+          <p class="card-text">
+            Muchos sistemas operativos aceptan nombres de archivos en dos partes, separadas por un punto, como en
+            prog.c. La parte que va después del punto se conoce como la extensión del archivo y por lo general indica
+            algo acerca de su naturaleza. Algunas de las extensiones de archivos más comunes y sus significados se
+            muestran en la Figura 1.
+          </p>
+
+          <p class="card-text"><strong>Figura 1. Algunas extensiones de archivos comunes.</strong></p>
+
+          <div class="text-center">
+            <img class="img-fluid" src="../images/figura_1.png" alt="Figura 1">
+          </div>
+
+
+
+
+          <p class="card-text">
+            En algunos sistemas (como UNIX) las extensiones de archivo son sólo convenciones y no son impuestas por los
+            sistemas operativos. Un archivo llamado archivo.txt podría ser algún tipo de archivo de texto, pero ese
+            nombre es más un recordatorio para el propietario que un medio para transportar información a la
+            computadora. Por otro lado, un compilador de C podría insistir que los archivos que va a compilar terminen
+            con .c y podría rehusarse a compilarlos si no tienen esa terminación.
+          </p>
+
+          <p class="card-text"><strong>Estructura de archivos</strong></p>
+
+          <p class="card-text">
+            Los archivos se pueden estructurar en una de varias formas. Tres posibilidades comunes se describen en la
+            Figura 2.
+            (a) Es una secuencia de bytes sin estructura: el sistema operativo no sabe, ni le importa, qué hay en el
+            archivo. Todo lo que ve son bytes. Cualquier significado debe ser impuesto por los programas a nivel
+            usuario. Tanto UNIX como Windows utilizan esta metodología.
+          </p>
+
+          <p class="card-text">
+            (b). Secuencia de registros. En este modelo, un archivo es una secuencia de registros de longitud fija, cada
+            uno con cierta estructura interna. El concepto central para la idea de que un archivo sea una secuencia de
+            registros es la idea de que la operación de lectura devuelva un registro y la operación de escritura
+            sobrescriba o agregue un registro.
+          </p>
+
+          <p class="card-text">
+            (c). En esta organización, un archivo consiste en un árbol de registros, donde no todos son necesariamente
+            de la misma longitud; cada uno de ellos contiene un campo llave en una posición fija dentro del registro. El
+            árbol se ordena con base en el campo llave para permitir una búsqueda rápida por una llave específica.
+          </p>
+
+          <p class="card-text"><strong>Figura 2. Tres tipos de archivos. (a) Secuencia de bytes. (b) Secuencia de
+            registros. (c)
+            Árbol.</strong></p>
+
+        <div class="text-center">
+          <img class="img-fluid" src="../images/figura_2.png" alt="Figura 2">
+        </div>
+
+          <p class="card-text">
+            La operación básica aquí no es obtener el “siguiente” registro, aunque eso también es posible, sino obtener
+            el registro con una llave específica. Evidentemente, este tipo de archivos es bastante distinto de los
+            flujos de bytes sin estructura que se usan en UNIX y Windows, pero se utiliza de manera amplia en las
+            grandes computadoras mainframe que aún se emplean en algún procesamiento de datos comerciales.
+          </p>
+
+          <p class="card-text"><strong>Tipos de archivos</strong></p>
+
+          <p class="card-text">
+            Los sistemas operativos soportan varios tipos de archivos. Por ejemplo, UNIX y Windows tienen archivos y
+            directorios regulares. UNIX también tiene archivos especiales de caracteres y de bloques. Los archivos
+            regulares son los que contienen información del usuario. Todos los archivos de la Figura 2 son archivos
+            regulares. Los directorios son sistemas de archivos para mantener la estructura del sistema de archivos.
+            Estudiaremos los directorios un poco más adelante. Los archivos especiales de caracteres se relacionan con
+            la entrada/salida y se utilizan para modelar dispositivos de E/S en serie, tales como terminales, impresoras
+            y redes. Los archivos especiales de bloques se utilizan para modelar discos.
+          </p>
+
+          <p class="card-text">
+            Por lo general, los archivos regulares son archivos ASCII o binarios. Los archivos ASCII consisten en líneas
+            de texto. En algunos sistemas, cada línea se termina con un carácter de retorno de carro. En otros se
+            utiliza el carácter de avance de línea. Algunos sistemas (por ejemplo, MS-DOS) utilizan ambos. No todas las
+            líneas necesitan ser de la misma longitud.
+          </p>
+
+          <p class="card-text">
+            La gran ventaja de los archivos ASCII es que se pueden mostrar e imprimir como están, y se pueden editar con
+            cualquier editor de texto. Además, si muchos programas utilizan archivos ASCII para entrada y salida, es
+            fácil conectar la salida de un programa con la entrada de otro, como en las canalizaciones de shell. (La
+            plomería entre procesos no es más fácil, pero la interpretación de la información lo es si una convención
+            estándar, tal como ASCII, se utiliza para expresarla).
+          </p>
+
+          <p class="card-text">
+            En la siguiente Figura 3 (a) Observamos un archivo binario ejecutable simple tomado de una de las primeras
+            versiones de UNIX. Aunque técnicamente el archivo es sólo una secuencia de bytes, el sistema operativo sólo
+            ejecutará un archivo si tiene el formato apropiado. Este archivo tiene cinco secciones: encabezado, texto,
+            datos, bits de reubicación y tabla de símbolos. El encabezado empieza con un supuesto número mágico, que
+            identifica al archivo como un archivo ejecutable (para evitar la ejecución accidental de un archivo que no
+            tenga este formato). Después vienen los tamaños de las diversas partes del archivo, la dirección en la que
+            empieza la ejecución y algunos bits de bandera. Después del encabezado están el texto y los datos del
+            programa en sí. Éstos se cargan en memoria y se reubican usando los bits de reubicación. La tabla de
+            símbolos se utiliza para depurar.
+          </p>
+
+          <p class="card-text"><strong>Figura 3. (a) Un archivo ejecutable. (b) Un archivo</strong></p>
+
+          <p class="card-text"><strong>Figura 3. (a) Un archivo ejecutable. (b) Un archivo</strong></p>
+
+        <div class="text-center">
+          <img class="img-fluid" src="../images/figura_3.png" alt="Figura 3">
+        </div>
+
+          <p class="card-text">
+            (b) Un archivo binario es un archivo, también de UNIX. Consiste en una colección de procedimientos (módulos)
+            de biblioteca compilados, pero no enlazados. A cada uno se le antepone un encabezado que indica su nombre,
+            fecha de creación, propietario, código de protección y tamaño. Al igual que en el caso del archivo
+            ejecutable, los encabezados de los módulos están llenos de números binarios. Al copiarlos a la impresora se
+            produciría basura como salida.
+          </p>
+
+          <p class="card-text">
+            Es por lo que cada sistema operativo debe reconocer por lo menos un tipo de archivo, o su propio archivo
+            ejecutable y así como sus archivos que no son ejecutables pero que si contienen información.
+          </p>
+
+          <p class="card-text"><strong>Acceso a archivos</strong></p>
+
+          <p class="card-text">
+            Los primeros sistemas operativos proporcionaban sólo un tipo de acceso: acceso secuencial. En estos
+            sistemas, un proceso podía leer todos los bytes o registros en un archivo en orden, empezando desde el
+            principio, pero no podía saltar algunos y leerlos fuera de orden. Sin embargo, los archivos secuenciales
+            podían rebobinarse para poder leerlos todas las veces que fuera necesario. Los archivos secuenciales eran
+            convenientes cuando el medio de almacenamiento era cinta magnética en vez de disco.
+          </p>
+
+          <p class="card-text">
+            Cuando se empezó a usar discos para almacenar archivos, se hizo posible leer los bytes o registros de un
+            archivo fuera de orden, pudiendo acceder a los registros por llave en vez de posición. Los archivos cuyos
+            bytes o registros se pueden leer en cualquier orden se llaman archivos de acceso aleatorio. Son requeridos
+            por muchas aplicaciones.
+          </p>
+
+          <p class="card-text">
+            Los archivos de acceso aleatorio son esenciales para muchas aplicaciones, como los sistemas de bases de
+            datos. Si el cliente de una aerolínea llama y desea reservar un asiento en un vuelo específico, el programa
+            de reservación debe poder tener acceso al registro para ese vuelo sin tener que leer primero los miles de
+            registros de otros vuelos.
+          </p>
+
+          <p class="card-text"><strong>Atributos de archivos</strong></p>
+
+          <p class="card-text">
+            Todo archivo tiene un nombre y sus datos. Además, todos los sistemas operativos asocian otra información con
+            cada archivo; como puede ser, la fecha y hora de la última modificación del archivo y su tamaño. A estos
+            elementos adicionales les llamaremos atributos del archivo. A ellos se les conoce como metadatos. La lista
+            de atributos varía considerablemente de un sistema a otro.
+          </p>
+
+          <p class="card-text">La siguiente Figura 4 muestra algunas de las posibilidades, pero existen otras.
+
+          <p class="card-text"><strong>Figura 4. Algunos posibles atributos de archivos.</strong></p>
+
+          <div class="text-center">
+            <img class="img-fluid" src="../images/figura_4.png" alt="Figura 5">
+          </div>
+
+          <p class="card-text">
+            Los primeros cuatro atributos se relacionan con la protección del archivo e indican quién puede acceder a él
+            y quién no. En algunos sistemas, el usuario debe presentar una contraseña para acceder a un archivo, en cuyo
+            caso la contraseña debe ser uno de los atributos. Las banderas son bits o campos cortos que controlan o
+            habilitan cierta propiedad específica, así como la bandera temporal permite marcar un archivo para la
+            eliminación automática cuando el proceso que lo creó termina.
+          </p>
+
+          <p class="card-text">
+            Los campos longitud de registro, posición de llave y longitud de llave sólo están presentes en los archivos
+            en cuyos registros se pueden realizar búsquedas mediante el uso de una llave. Ellos proporcionan la
+            información requerida para buscar las llaves.
+          </p>
+
+          <p class="card-text">
+            Los diversos tiempos llevan la cuenta de cuándo se creó el archivo, su acceso y su modificación más
+            recientes. Éstos son útiles para una variedad de propósitos.
+          </p>
+
+          <p class="card-text">
+            El tamaño actual indica qué tan grande es el archivo en el presente. Algunos sistemas operativos de
+            computadoras mainframe antiguas requieren que se especifique el tamaño máximo a la hora de crear el archivo,
+            para poder permitir que el sistema operativo reserve la cantidad máxima de almacenamiento de antemano. Los
+            sistemas operativos de estaciones de trabajo y computadoras personales son lo bastante inteligentes como
+            para arreglárselas sin esta característica.
+          </p>
 
           <br>
 
-
           <ul class="pagination justify-content-end">
             <li class="page-item">
-                <a class="page-link" href="../index.html">Anterior</a>
+              <a class="page-link" href="../index.html">Anterior</a>
             </li>
             <li class="page-item"><a class="page-link" href="introduccion.html">1</a></li>
-            <li class="page-item active"><a class="page-link" href="4-1-estructura-del-sistema-de-archivos.html">2</a></li>
+            <li class="page-item active"><a class="page-link" href="4-1-estructura-del-sistema-de-archivos.html">2</a>
+            </li>
             <li class="page-item"><a class="page-link" href="4-1-1-capa-del-sistema-de-archivos.html">3</a></li>
             <li class="page-item"><a class="page-link" href="actividad-1.html">4</a></li>
             <li class="page-item">
-                <a class="page-link" href="4-2-implementacion.html">Siguiente Tema</a>
+              <a class="page-link" href="introduccion-2.html">Siguiente Tema</a>
             </li>
-        </ul>
+          </ul>
 
 
         </div>
