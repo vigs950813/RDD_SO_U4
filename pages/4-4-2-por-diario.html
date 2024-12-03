@@ -91,11 +91,11 @@
 
                     <ol class="card-text">
                         <li><strong>Fiabilidad de los datos</strong></li>Al registrar cambios antes de aplicarlos, se
-                        evita la corrupción de datos en situaciones inesperadas.
+                        evita la corrupción de datos en situaciones inesperadas
                         <li><strong>Recuperación optimizada</strong></li>Permite restaurar el sistema de archivos
-                        rápidamente tras un fallo, reduciendo el tiempo y complejidad de reparación.
+                        rápidamente tras un fallo, reduciendo el tiempo y complejidad de reparación
                         <li><strong>Mejora de rendimiento</strong></li>Algunas implementaciones de <i>journaling</i>
-                        agrupan operaciones para reducir la cantidad de escrituras al disco.
+                        agrupan operaciones para reducir la cantidad de escrituras al disco
                     </ol>
                 </div>
             </div>
@@ -108,11 +108,11 @@
 
                     <ol class="card-text">
                         <li><strong><i>Write-ahead logging</i></strong></li>Solo registra los metadatos antes de
-                        actualizar el disco, ofreciendo recuperación rápida de la estructura del sistema de archivos.
+                        actualizar el disco, ofreciendo recuperación rápida de la estructura del sistema de archivos
                         <li><strong><i>Ordered mode</i></strong></li>Registra tanto metadatos como datos antes de
-                        escribir en el disco, garantizando recuperación completa pero con impacto menor en la velocidad.
+                        escribir en el disco, garantizando recuperación completa pero con impacto menor en la velocidad
                         <li><strong><i>Data mode</i></strong></li>Registra tanto datos como metadatos antes de cualquier
-                        cambio, ofreciendo máxima recuperación, pero es más lento y ocupa más espacio en disco.
+                        cambio, ofreciendo máxima recuperación, pero es más lento y ocupa más espacio en disco
                     </ol>
                 </div>
             </div>
@@ -125,11 +125,11 @@
 
                     <ol class="card-text">
                         <li><strong>Consumo de espacio</strong></li>El diario consume espacio adicional en el disco, y
-                        si se realizan muchas operaciones, el tamaño del diario puede afectar el rendimiento.
+                        si se realizan muchas operaciones, el tamaño del diario puede afectar el rendimiento
                         <li><strong>Impacto en el rendimiento</strong></li>La escritura continua en el diario puede
-                        agregar sobrecarga, especialmente en sistemas con recursos limitados.
+                        agregar sobrecarga, especialmente en sistemas con recursos limitados
                         <li><strong>Limitaciones en la coherencia de datos de usuario</strong></li>En algunos modos,
-                        solo se garantiza la consistencia de los metadatos, no de los datos del usuario.
+                        solo se garantiza la consistencia de los metadatos, no de los datos del usuario
                     </ol>
                 </div>
             </div>
@@ -141,8 +141,8 @@
                 <div class="card-body">
 
                     <ol class="card-text">
-                        <li>Elegir el modo de journaling adecuado en función de la carga de trabajo.</li>
-                        <li>Asignar espacio suficiente para el diario y realizar copias de seguridad regulares.</li>
+                        <li>Elegir el modo de journaling adecuado en función de la carga de trabajo</li>
+                        <li>Asignar espacio suficiente para el diario y realizar copias de seguridad regulares</li>
                     </ol>
                     <p class="card-text">
                         En caso de requerir más información sobre el tema, se proporciona el siguiente material audiovisual.
