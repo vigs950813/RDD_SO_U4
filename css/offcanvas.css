@@ -12,15 +12,17 @@
     color: black;
 }
 
-.offcanvas .btn{
-    width: 20rem;
+.offcanvas .btn .btn-secondary .btn-lg{
+    align-content: left;
+    text-align: left;
+    width: 17rem;
     height: 5rem;
 	background-color: #68778B;
 	color: white;
 	font-weight: bold;
 }
 
-.offcanvas .dropdown-toggle{
+.offcanvas .btn .btn-lg .btn-secondary .dropdown-toggle .dropdown-toggle-split{
     width: 3rem;
     height: 5rem;
 	background-color: #68778B;
