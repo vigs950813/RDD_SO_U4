@@ -13,6 +13,11 @@
     color: white;
 }
 
+.card-header.cardExample{
+    text-align: left;
+}
+
+
 .card-header.concept{
     background-color: #307BCF;
     text-align: left;
@@ -23,7 +28,7 @@
 
 .card-header-example{
     background-color: #e5eff9;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     font-weight: bold;
     color: black;

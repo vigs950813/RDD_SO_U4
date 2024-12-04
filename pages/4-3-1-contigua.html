@@ -63,6 +63,23 @@
                         y la dificultad para encontrar bloques contiguos lo suficientemente grandes para
                         archivos que crecen con el tiempo.
                     </p>
+                    <p class="card-text">En la asignación contigua, los archivos se almacenan en bloques adyacentes en
+                        el disco duro, de manera similar a reservar una fila de asientos consecutivos en un cine. Este
+                        método permite que la lectura del archivo sea extremadamente rápida, ya que los datos se acceden
+                        de manera secuencial sin interrupciones.</p>
+
+                    <p class="card-text">Además, localizar cualquier parte del archivo es sencillo; solo necesitas
+                        conocer el punto de inicio y la cantidad total de bloques que ocupa, como se ilustra en la
+                        Figura XX.</p>
+
+                    <p class="card-text">
+                        <strong>
+                            Figura XX. Nombre y número en construcción.
+                        </strong>
+                    </p>
+                    <div class="text-center">
+                        <img src="../images/eed51909-5eb6-4e92-ba55-e3f85c53e56e.jpg" alt="Figura" class="img-fluid">
+                    </div>
                 </div>
             </div>
         </section>
@@ -71,7 +88,7 @@
         <!-- Section 2 -->
         <section>
             <div class="card">
-                <h5 class="card-header">Ventajas</h5>
+                <h5 class="card-header cardExample">Ventajas</h5>
                 <div class="card-body">
                     <div class="accordion" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
@@ -119,7 +136,7 @@
         <section>
 
             <div class="card">
-                <h5 class="card-header">Desventajas</h5>
+                <h5 class="card-header cardExample">Desventajas</h5>
                 <div class="card-body">
                     <div class="accordion" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
@@ -158,6 +175,17 @@
                                 </div>
                             </div>
                         </div>
+                        <p class="card-text">
+                            La asignación contigua se utiliza frecuentemente en sistemas de archivos más antiguos, como
+                            el sistema FAT (File Allocation Table) de las primeras versiones de Windows.
+                        </p>
+
+                        <p class="card-text">
+                            Este tipo de asignación es especialmente adecuada para sistemas que necesitan acceder
+                            rápidamente y de manera secuencial a archivos que son de tamaño fijo o que tienen pocos
+                            cambios.
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -168,7 +196,7 @@
         <section>
 
             <div class="card">
-                <h5 class="card-header">Ejemplo</h5>
+                <h5 class="card-header cardExample">Ejemplo</h5>
                 <div class="card-body">
                     <div class="card-text">
                         Supongamos que un archivo necesita ocupar 4 bloques consecutivos en el
@@ -191,15 +219,19 @@
                     </div>
 
                     <p class="card-text">
-                        En caso de requerir más información sobre el tema, se proporciona el siguiente material audiovisual.
+                        En caso de requerir más información sobre el tema, se proporciona el siguiente material
+                        audiovisual.
                     </p>
 
                     <p class="card-text">
                         <strong>(2024b). Métodos de asignación de espacio</strong>
                     </p>
-                    
+
                     <div class="text-center">
-                            <iframe style="width: 50rem; height: 40rem;" src="https://www.youtube.com/embed/g-bhPcGNRog" title="Metodos de Asignacion de Espacio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe style="width: 50rem; height: 40rem;" src="https://www.youtube.com/embed/g-bhPcGNRog"
+                            title="Metodos de Asignacion de Espacio" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
 
                     <br>
@@ -208,11 +240,13 @@
                             <a class="page-link" href="introduccion-2.html">Anterior</a>
                         </li>
                         <li class="page-item"><a class="page-link" href="introduccion-3.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="4-3-metodos-de-asignacion-de-espacio.html">2</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-3-metodos-de-asignacion-de-espacio.html">2</a></li>
                         <li class="page-item active"><a class="page-link" href="4-3-1-contigua.html">3</a></li>
                         <li class="page-item"><a class="page-link" href="4-3-2-ligada.html">4</a></li>
                         <li class="page-item"><a class="page-link" href="4-3-3-indexada.html">5</a></li>
-                        <li class="page-item"><a class="page-link" href="4-3-4-administracion-del-espacio-en-disco.html">6</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-3-4-administracion-del-espacio-en-disco.html">6</a></li>
                         <li class="page-item"><a class="page-link" href="actividad-2.html">7</a></li>
                         <li class="page-item">
                             <a class="page-link" href="introduccion-4.html">Siguiente Tema</a>
