@@ -54,12 +54,10 @@
         <h5 class="card-header">4.1.1 Capa del sistema de archivos</h5>
         <div class="card-body">
           <p class="card-text">
-            La <strong>capa del sistema de archivos</strong> es la encargada de gestionar las operaciones
-            básicas que los usuarios y aplicaciones realizan sobre los archivos, como la
-            creación, modificación, lectura y eliminación de archivos y directorios. Esta capa se
-            sitúa entre las aplicaciones y el hardware, actuando como una interfaz que oculta la
-            complejidad de las operaciones de bajo nivel que se realizan en los dispositivos de
-            almacenamiento.
+            La capa del sistema de archivos se encarga de gestionar operaciones básicas sobre archivos y directorios, como su
+            creación, modificación, lectura y eliminación. Sirve como interfaz entre aplicaciones y hardware, ocultando la
+            complejidad de las operaciones de bajo nivel realizadas en dispositivos de almacenamiento. Esta capa está compuesta
+            por varias subcapas, cada una con un rol específico en la gestión de datos.
           </p>
           <p class="card-text">
             La capa del sistema de archivos se puede dividir en varias subcapas o
@@ -78,12 +76,9 @@
               <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                 <div class="accordion-body">
                   <p class="card-text">
-                    Esta subcapa es responsable de proporcionar la interfaz que los usuarios y
-                    aplicaciones utilizan para interactuar con el sistema de archivos. Los comandos que
-                    los usuarios ejecutan en la terminal o los llamados a funciones específicas en una
-                    <a href="glosario.html" target="_blank">API</a> se procesan a través de esta subcapa. Proporciona operaciones como abrir,
-                    cerrar, leer y escribir archivos. En sistemas como <a href="glosario.html" target="_blank">UNIX</a> y <a href="glosario.html" target="_blank">Linux</a>, estas operaciones
-                    están encapsuladas en llamadas al sistema, como <i>open</i>(), <i>read</i>(), <i>write</i>() y <i>close</i>(), abrir, leer, escribir y cerrar respectivamente.
+                    Esta parte del sistema de archivos actúa como un intermediario entre los usuarios, las aplicaciones y el sistema de
+                    archivos, permitiendo realizar operaciones básicas como abrir, cerrar, leer y escribir archivos. En sistemas como UNIX
+                    y Linux, estas acciones se gestionan mediante llamadas al sistema como open(), read(), write() y close().
                   </p>
                   <p class="card-text">
                     <strong>Código 1.</strong>
@@ -111,14 +106,7 @@
               </h2>
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                  <p class="card-text">
-                    Otra responsabilidad importante de la capa del sistema de archivos es gestionar los
-                    nombres de archivos y la estructura de los directorios. En esta subcapa se
-                    implementan las funciones que permiten a los usuarios organizar sus archivos en
-                    una estructura de carpetas y subcarpetas, facilitando la organización y búsqueda de
-                    datos. Los sistemas operativos utilizan una <strong>tabla de directorios</strong> que almacena
-                    información sobre la ubicación de cada archivo en el sistema.
-                  </p>
+                  <p class="card-text"> La capa del sistema de archivos gestiona los nombres de archivos y la estructura de directorios, permitiendo a los usuarios organizar sus archivos en carpetas y subcarpetas. Utiliza una tabla de directorios para almacenar ubicaciones. También es responsable de la asignación y administración del espacio en el almacenamiento, decidiendo cómo se asignan bloques de disco y optimizando el almacenamiento para reducir la fragmentación. Los sistemas de archivos emplean diversas estrategias para asignar espacio, como bloques en ext4 y clústeres en NTFS. </p>
                   <p class="card-text">
                     Por ejemplo, en sistemas operativos como <a href="glosario.html" target="_blank">Linux</a>, la estructura jerárquica se organiza
                     en forma de árbol, donde el directorio raíz (/) es la raíz del sistema de archivos, y
@@ -126,7 +114,7 @@
                     recursiva.
                   </p>
                   <p class="card-text">
-                    <strong>Figura 1.</strong>
+                    <strong>Figura 5.</strong>
                   </p>
                   <p class="card-text">
                     <i>Ejemplo de jerarquía de directorios.</i>
@@ -178,13 +166,7 @@
               </h2>
               <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                  <p class="card-text">Además de los datos de los archivos, el sistema de archivos también debe
-                    gestionar
-                    los metadatos, que incluyen información como los permisos de acceso, la fecha de
-                    creación, la fecha de modificación y el tamaño de los archivos. Estos metadatos se
-                    almacenan en una estructura separada de los datos de los archivos, y el sistema de
-                    archivos debe asegurarse de que siempre estén sincronizados con los datos
-                    correspondientes.</p>
+                  <p class="card-text">Administra metadatos como permisos, fechas y tamaños, asegurando su sincronización con los datos correspondientes.</p>
                   <p class="card-text">
                     Por ejemplo, en sistemas como <a href="glosario.html" target="_blank">ext4</a>, los metadatos se almacenan en inodos, que
                     contienen toda la información necesaria para localizar los datos de un archivo en el
@@ -218,12 +200,7 @@
               </h2>
               <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                  <p class="card-text">La capa del sistema de archivos también se encarga de implementar políticas de
-                    seguridad mediante el control de acceso y la gestión de permisos. Cada archivo y
-                    directorio tiene permisos asociados que determinan quién puede leer, escribir o
-                    ejecutar un archivo. Estos permisos son administrados por el sistema de archivos y
-                    son fundamentales para la seguridad y el aislamiento de los usuarios y procesos en
-                    un sistema operativo multiusuario.</p>
+                  <p class="card-text">Implementa control de acceso y permisos, fundamentales para la seguridad en sistemas multiusuario, utilizando esquemas numéricos o simbólicos.</p>
                   <p class="card-text">Los permisos generalmente se representan utilizando un esquema numérico o
                     simbólico, como en los sistemas basados en <a href="glosario.html" target="_blank">UNIX</a>, donde los permisos se dividen
                     en tres grupos: propietario, grupo y otros, con permisos de lectura (r), escritura (w) y

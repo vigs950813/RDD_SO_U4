@@ -57,14 +57,12 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        La <strong>compartición de archivos</strong> es una característica esencial en sistemas
-                        multiusuario
-                        o en redes, donde diferentes usuarios y aplicaciones pueden necesitar acceder al
-                        mismo archivo simultáneamente. La implementación de archivos compartidos
-                        plantea varios desafíos, como la gestión de permisos, la sincronización de acceso y
-                        la coherencia de los datos. Existen varias formas de implementar archivos
-                        compartidos en un sistema de archivos:
+                        La compartición de archivos es fundamental en sistemas multiusuario o en redes, donde múltiples
+                        usuarios y aplicaciones pueden necesitar acceder al mismo archivo simultáneamente. La
+                        implementación de archivos compartidos enfrenta desafíos como la gestión de permisos, la
+                        sincronización de acceso y la coherencia de los datos.
                     </p>
+
 
 
                     <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -79,18 +77,16 @@
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Un enlace duro es una entrada en el sistema de archivos que apunta al mismo
-                                        inodo
-                                        (es decir, la misma ubicación en disco) que otro archivo. Ambos nombres de
-                                        archivo
-                                        son iguales para el sistema, por lo que cualquier cambio realizado en uno de los
-                                        archivos se refleja automáticamente en el otro. Sin embargo, los enlaces duros
-                                        solo
-                                        pueden crearse en el mismo sistema de archivos.
+                                        Un enlace duro es una referencia en el sistema de archivos que señala la misma
+                                        ubicación en el disco que otro archivo. Ambos archivos tienen el mismo nombre
+                                        para el sistema, por lo que cualquier cambio en uno se refleja en el otro. Sin
+                                        embargo, estos enlaces solo pueden crearse dentro del mismo sistema de archivos.
                                     </p>
+
                                     <p class="card-text">
                                         A continuación, se presenta un ejemplo ilustrativo de enlace duro en
-                                        <a href="glosario.html" target="_blank">Linux</a> usando el comando <i>ln</i>, ambos archivos comparten el mismo contenido
+                                        <a href="glosario.html" target="_blank">Linux</a> usando el comando <i>ln</i>,
+                                        ambos archivos comparten el mismo contenido.
                                     </p>
                                     <p class="card-text">
                                         <strong>Código 4.</strong>
@@ -119,14 +115,13 @@
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Los enlaces simbólicos son archivos que contienen una referencia (puntero) a
-                                        otro
-                                        archivo o directorio. A diferencia de los enlaces duros, los enlaces simbólicos
-                                        pueden apuntar a archivos en diferentes sistemas de archivos o discos. Sin
-                                        embargo, si el archivo original se elimina, el enlace simbólico se vuelve
-                                        inválido (un
-                                        enlace “roto”).
+                                        Los enlaces simbólicos son archivos que actúan como referencias a otros archivos
+                                        o directorios. A diferencia de los enlaces duros, los enlaces simbólicos pueden
+                                        apuntar a archivos en diferentes sistemas de archivos o discos. No obstante, si
+                                        el archivo original se elimina, el enlace simbólico se vuelve inválido, conocido
+                                        como un enlace roto.
                                     </p>
+
                                     <p class="card-text">
                                         A conitnuación, se presenta un ejemplo de uso del comando <i>ln -s</i>.
                                     </p>
@@ -160,19 +155,14 @@
                                 <div class="accordion-body">
                                     <p class="card-text">
                                         Cuando varios usuarios o procesos acceden simultáneamente a un archivo
-                                        compartido, el sistema de archivos debe implementar mecanismos para evitar
-                                        conflictos y garantizar la coherencia de los datos. Los sistemas de archivos
-                                        suelen
-                                        utilizar <strong>bloqueos de archivos</strong> (<i>file locks</i>) para
-                                        controlar el acceso concurrente. Un
-                                        bloqueo puede ser de lectura o escritura, y asegura que cuando un proceso está
-                                        accediendo al archivo, otros procesos no puedan modificarlo.
+                                        compartido, el sistema de archivos utiliza mecanismos como los bloqueos de
+                                        archivos (file locks) para evitar conflictos y garantizar la coherencia de los
+                                        datos. Estos bloqueos pueden ser de lectura o escritura, asegurando que otros
+                                        procesos no puedan modificar el archivo mientras está bloqueado. En Linux, se
+                                        utiliza la función flock() para bloquear un archivo y garantizar que solo un
+                                        proceso pueda escribir en él en un momento dado.
                                     </p>
-                                    <p class="card-text">
-                                        En Linux, se puede utilizar la función <i>flock()</i> para bloquear un archivo y
-                                        garantizar
-                                        que solo un proceso pueda escribir en él en un momento dado.
-                                    </p>
+
                                     <p class="card-text">
                                         <strong>Código 6.</strong>
                                     </p>
@@ -182,25 +172,20 @@
                                     <p class="text-center">
                                         <img src="../images/codigo6.png" class="img-fluid" alt="Código 6">
                                     </p>
-                                    <p class="card-text">
-                                        La implementación del sistema de archivos abarca la gestión eficiente de
-                                        archivos,
-                                        directorios y archivos compartidos. El sistema operativo debe equilibrar el uso
-                                        del
-                                        espacio en disco, el rendimiento y la coherencia de los datos para garantizar un
-                                        acceso rápido y seguro a la información.
-                                    </p>
-                                    <p class="card-text">
-                                        Los métodos como la asignación contigua,
-                                        enlazada e indexada permiten gestionar eficientemente los archivos, mientras que
-                                        los directorios jerárquicos facilitan la organización de los datos. La
-                                        compartición de
 
-                                        archivos se logra mediante enlaces duros, simbólicos y mecanismos de control de
-                                        acceso concurrente, que permiten la colaboración entre usuarios y procesos.
-                                    </p>
                                 </div>
                             </div>
+                            <p class="card-text">
+                                La implementación del sistema de archivos incluye la gestión eficiente de
+                                archivos, directorios y archivos compartidos. El sistema operativo debe
+                                equilibrar el uso del espacio en disco, el rendimiento y la coherencia de los
+                                datos para garantizar un acceso rápido y seguro a la información. Métodos como
+                                la asignación contigua, enlazada e indexada ayudan a gestionar eficientemente
+                                los archivos, mientras que los directorios jerárquicos facilitan la organización
+                                de los datos. La compartición de archivos se logra mediante enlaces duros,
+                                simbólicos y mecanismos de control de acceso concurrente, permitiendo la
+                                colaboración entre usuarios y procesos.
+                            </p>
                         </div>
                     </div>
                     <br>
@@ -212,7 +197,8 @@
                         <li class="page-item"><a class="page-link" href="4-2-implementacion.html">2</a></li>
                         <li class="page-item"><a class="page-link" href="4-2-1-de-archivos.html">3</a></li>
                         <li class="page-item"><a class="page-link" href="4-2-2-de-directorios.html">4</a></li>
-                        <li class="page-item active"><a class="page-link" href="4-2-3-archivos-compartidos.html">5</a></li>
+                        <li class="page-item active"><a class="page-link" href="4-2-3-archivos-compartidos.html">5</a>
+                        </li>
                         <li class="page-item"><a class="page-link" href="actividad-2.html">6</a></li>
                         <li class="page-item">
                             <a class="page-link" href="introduccion-3.html">Siguiente Tema</a>

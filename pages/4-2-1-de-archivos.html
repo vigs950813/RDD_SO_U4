@@ -56,12 +56,11 @@
 
                 <div class="card-body">
 
-                    <p class="card-text">La implementación de archivos se centra en cómo el sistema operativo representa
-                        y
-                        gestiona los archivos en el disco. Un archivo no es más que una secuencia de <a href="glosario.html" target="_blank">bytes</a>
-                        almacenada en un medio físico, pero el sistema operativo debe mantener
-                        información adicional para facilitar su acceso, como el nombre, el tamaño, los
-                        permisos, las fechas de creación y modificación, y la ubicación en el disco.</p>
+                    <p class="card-text">La implementación de archivos trata sobre cómo el sistema operativo organiza y
+                        gestiona los archivos en el disco. Aunque un archivo no es más que una serie de bytes guardados
+                        en un dispositivo, el sistema operativo necesita mantener información adicional como el nombre
+                        del archivo, su tamaño, los permisos, las fechas en que fue creado y modificado, y su ubicación
+                        en el disco para poder acceder a él fácilmente.</p>
                     <p class="card-text">Los archivos se almacenan en bloques de disco, y la forma en que estos bloques
                         se
                         asignan y organizan puede variar según el sistema de archivos. Hay tres métodos
@@ -79,11 +78,11 @@
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Los archivos se almacenan en bloques consecutivos en el disco, lo que permite un
-                                        acceso muy rápido, ya que no se requiere saltar entre bloques dispersos. Sin
-                                        embargo, este enfoque sufre de fragmentación externa, lo que significa que
-                                        encontrar un espacio contiguo lo suficientemente grande para nuevos archivos
-                                        puede volverse difícil con el tiempo.
+                                        Los archivos se guardan en el disco en bloques uno detrás del otro, lo que
+                                        permite acceder a ellos rápidamente sin necesidad de saltar entre partes del
+                                        disco. Sin embargo, este método tiene un problema: con el tiempo, puede ser
+                                        difícil encontrar un espacio grande y continuo para guardar nuevos archivos
+                                        debido a la fragmentación del disco.
                                     </p>
                                     <div class="card">
                                         <div class="card-header-example">
@@ -91,10 +90,17 @@
                                         </div>
                                         <div class="card-body">
                                             <p class="card-text">
-                                                Si un archivo de 1000 <a href="glosario.html" target="_blank">bytes</a> necesita ser almacenado y cada bloque de disco tiene 256 bytes, se necesitan 4
-                                                bloques contiguos para guardar archivo. Si más tarde se intenta agregar otro archivo de 2000 bytes, pero no
-                                                hay espacio contiguo de esa magnitud, el archivo no podrá almacenarse en esa ubicación, incluso si hay
-                                                espacio suficiente en otras partes del disco.
+                                                Este método de almacenamiento enlaza los bloques de un archivo mediante
+                                                punteros, lo que significa que los bloques no tienen que estar juntos.
+                                                Cada bloque tiene un puntero al siguiente, lo que facilita la
+                                                organización del espacio en el disco. Sin embargo, esto hace que el
+                                                acceso a los archivos sea más lento, ya que hay que seguir los punteros
+                                                de un bloque a otro.
+
+                                                Por ejemplo, en sistemas operativos como Linux, los archivos y carpetas
+                                                se organizan de forma jerárquica, similar a un árbol. La raíz del
+                                                sistema de archivos es el directorio "/", y debajo de él hay más
+                                                directorios y archivos organizados de manera recursiva.
                                             </p>
                                         </div>
                                     </div>
@@ -112,15 +118,15 @@
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        En este método, los bloques de un archivo están enlazados entre sí mediante
-                                        punteros, lo que permite que los bloques no estén necesariamente contiguos. El
-                                        último bloque de cada archivo contiene un puntero al siguiente bloque,
-                                        facilitando la
-                                        gestión del espacio. Sin embargo, el acceso es más lento, ya que es necesario
-                                        seguir los punteros para leer el archivo completo.
+                                        Este método de almacenamiento enlaza los bloques de un archivo mediante
+                                        punteros, lo que significa que los bloques no tienen que estar juntos. Cada
+                                        bloque tiene un puntero al siguiente, lo que facilita la organización del
+                                        espacio en el disco. Sin embargo, esto hace que el acceso a los archivos sea más
+                                        lento, ya que hay que seguir los punteros de un bloque a otro.
                                     </p>
                                     <p class="card-text">
-                                        Por ejemplo, en sistemas operativos como <a href="glosario.html" target="_blank">Linux</a>, la estructura jerárquica se
+                                        Por ejemplo, en sistemas operativos como <a href="glosario.html"
+                                            target="_blank">Linux</a>, la estructura jerárquica se
                                         organiza
                                         en forma de árbol, donde el directorio raíz (/) es la raíz del sistema de
                                         archivos, y
@@ -133,8 +139,10 @@
                                         </div>
                                         <div class="card-body">
                                             <p class="card-text">
-                                                Si un archivo está almacenado en los bloques 10, 25, y 100, el sistema almacena un puntero en el bloque 10 que apunta al
-                                                bloque 25, y otro puntero en el bloque 25 que apunta al bloque 100. Para acceder a todo el archivo, el sistema debe
+                                                Si un archivo está almacenado en los bloques 10, 25, y 100, el sistema
+                                                almacena un puntero en el bloque 10 que apunta al
+                                                bloque 25, y otro puntero en el bloque 25 que apunta al bloque 100. Para
+                                                acceder a todo el archivo, el sistema debe
                                                 seguir estos enlaces.
                                             </p>
                                         </div>
@@ -161,17 +169,19 @@
                                         necesidad de bloques contiguos o enlaces entre bloques de datos. La
                                         fragmentación se reduce considerablemente y se optimiza el acceso a los
                                         archivos.</p>
-                                        <div class="card">
-                                            <div class="card-header-example">
-                                                Ejemplo
-                                            </div>
-                                            <div class="card-body">
-                                                <p class="card-text">
-                                                    Supongamos que un archivo está almacenado en los bloques 5, 30, 45, y 70. El sistema de archivos crea un inodo que
-                                                    contiene punteros a estos bloques, y el sistema operativo accede directamente a los bloques a través del inodo.
-                                                </p>
-                                            </div>
+                                    <div class="card">
+                                        <div class="card-header-example">
+                                            Ejemplo
                                         </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Supongamos que un archivo está almacenado en los bloques 5, 30, 45, y
+                                                70. El sistema de archivos crea un inodo que
+                                                contiene punteros a estos bloques, y el sistema operativo accede
+                                                directamente a los bloques a través del inodo.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
