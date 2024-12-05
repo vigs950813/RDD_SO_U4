@@ -147,24 +147,9 @@
             directorios regulares. UNIX también tiene archivos especiales de caracteres y de bloques. Los archivos
             regulares son los que contienen información del usuario. Todos los archivos de la Figura 2 son archivos
             regulares. Los directorios son sistemas de archivos para mantener la estructura del sistema de archivos.
-            Estudiaremos los directorios un poco más adelante. Los archivos especiales de caracteres se relacionan con
+            Los archivos especiales de caracteres se relacionan con
             la entrada/salida y se utilizan para modelar dispositivos de E/S en serie, tales como terminales, impresoras
             y redes. Los archivos especiales de bloques se utilizan para modelar discos.
-          </p>
-
-          <p class="card-text">
-            Por lo general, los archivos regulares son archivos ASCII o binarios. Los archivos ASCII consisten en líneas
-            de texto. En algunos sistemas, cada línea se termina con un carácter de retorno de carro. En otros se
-            utiliza el carácter de avance de línea. Algunos sistemas (por ejemplo, MS-DOS) utilizan ambos. No todas las
-            líneas necesitan ser de la misma longitud.
-          </p>
-
-          <p class="card-text">
-            La gran ventaja de los archivos ASCII es que se pueden mostrar e imprimir como están, y se pueden editar con
-            cualquier editor de texto. Además, si muchos programas utilizan archivos ASCII para entrada y salida, es
-            fácil conectar la salida de un programa con la entrada de otro, como en las canalizaciones de shell. (La
-            plomería entre procesos no es más fácil, pero la interpretación de la información lo es si una convención
-            estándar, tal como ASCII, se utiliza para expresarla).
           </p>
 
           <p class="card-text">
@@ -265,6 +250,46 @@
             sistemas operativos de estaciones de trabajo y computadoras personales son lo bastante inteligentes como
             para arreglárselas sin esta característica.
           </p>
+
+          <p class="card-text">
+            A continuación se presentan algunos de los tipos de archivo más comunes.
+          </p>
+
+          <p class="card-text">
+            <strong>Tipo Binario</strong><br>
+            Los archivos binarios contienen datos codificados en formato binario, ideales para almacenar y procesar
+            grandes cantidades de información de forma eficiente. Son esenciales en aplicaciones de alto rendimiento y
+            requieren herramientas especializadas para su lectura e interpretación.
+          </p>
+
+          <ul class="card-text">
+            <li>Almacenamiento compacto legible por máquina</li>
+            <li>Uso en imágenes, audio, video, programas ejecutables, entre otros</li>
+            <li>Esenciales para aplicaciones de alto rendimiento</li>
+          </ul>
+
+          <p class="card-text">
+            <strong>Codificación</strong><br>
+            La codificación de un archivo determina cómo se leen los datos de carácter. Diferentes métodos de
+            codificación, como ASCII, ANSI y Unicode, permiten la representación y comunicación de texto en diversos
+            sistemas.
+          </p>
+
+          <ul class="card-text">
+            <li>ASCII: Sistema de codificación estándar para texto, con valores únicos para cada carácter</li>
+            <li>ANSI: Ampliación de ASCII para representar más caracteres y símbolos, facilitando la interpretación de
+              texto en diferentes sistemas</li>
+            <li>Unicode: Estándar para representar texto de diferentes idiomas y sistemas de escritura, con variantes
+              como UTF-8, UTF-16 y UTF-32</li>
+          </ul>
+
+          <p class="card-text">
+            <strong>UTF-8</strong><br>
+            La codificación UTF-8 es parte del estándar Unicode y es popular por su compatibilidad con ASCII y su
+            eficiencia en la representación de caracteres de diferentes idiomas. Permite una codificación flexible de
+            uno a cuatro bytes por carácter, lo que facilita su uso en diversas plataformas y dispositivos.
+          </p>
+
 
           <br>
 
