@@ -22,3 +22,32 @@ input[type="checkbox"]{
 }
 
 
+.card-text.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.card-text.table th, 
+.card-text.table td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+}
+.card-text.table th {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+.card-text.table td:first-child {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+.card-text.table tr:nth-child(even) {
+  background-color: #ddd;
+}
+.card-text.table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+
+
