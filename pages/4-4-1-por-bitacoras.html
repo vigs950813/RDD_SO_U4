@@ -55,53 +55,33 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        Aunque los sistemas de archivos estructurados por registro son una idea interesante, no se
-                        utilizan ampliamente,
-                        debido en parte a su alta incompatibilidad con los sistemas de archivos existentes. Sin embargo,
-                        una de las ideas
-                        inherentes en ellos, la robustez frente a las fallas, se puede aplicar con facilidad a sistemas
-                        de archivos más
-                        convencionales.
+                        Si bien los sistemas de archivos basados en registros son una propuesta interesante, no se emplean de manera extendida, en parte debido a su significativa incompatibilidad con los sistemas de archivos actuales. No obstante, uno de los conceptos implícitos en ellos, la resistencia a fallas, se puede incorporar fácilmente a sistemas de archivos más tradicionales.
                     </p>
 
                     <p class="card-text">
-                        La idea básica aquí es mantener un registro de lo que va a realizar el sistema de archivos antes
-                        de hacerlo, por lo
-                        que si el sistema falla antes de poder realizar su trabajo planeado, al momento de re-arrancar
-                        el sistema puede
-                        buscar en el registro para ver lo que estaba ocurriendo al momento de la falla y terminar el
-                        trabajo.
+                        El concepto principal es mantener un registro de las acciones que realizará el sistema de archivos antes de ejecutarlas. Así, si el sistema falla antes de completar la tarea prevista, al reiniciar el sistema puede consultar el registro para identificar lo que estaba sucediendo en el momento del fallo y finalizar la tarea.
                     </p>
 
                     <p class="card-text">
-                        Dichos sistemas de archivos, conocidos como sistemas de archivos por bitácora (<i>Journaling
-                            Files System</i>, JFS), se
-                        encuentran en uso actualmente. El sistema de archivos NTFS de Microsoft, así como los sistemas
-                        ext3 y ReiserFS de
-                        Linux son todos por bitácora.
+                        Estos sistemas de archivos, denominados sistemas de archivos con registro (Journaling Files System, JFS), están en uso actualmente. El sistema de archivos NTFS de Microsoft, así como los sistemas ext3 y ReiserFS de Linux, son ejemplos de sistemas con registro.
                     </p>
 
                     <p class="card-text">
-                        Para ver la naturaleza del problema, considere una operación simple que ocurre todo el tiempo:
-                        remover un archivo. Esta operación (en UNIX) requiere tres pasos:
+                        Para comprender la naturaleza del problema, considere una operación sencilla que ocurre frecuentemente: eliminar un archivo. Esta operación (en UNIX) implica tres pasos:
                     </p>
 
                     <ol class="card-text" type="1">
-                        <li>Quitar el archivo de su directorio</li>
-                        <li>Liberar el nodo-i y pasarlo a la reserva de nodos-i libres</li>
+                        <li>Eliminar el archivo de su directorio</li>
+                        <li>Liberar el nodo-i y transferirlo a la reserva de nodos-i disponibles</li>
                         <li>Devolver todos los bloques de disco a la reserva de bloques de disco libres</li>
                     </ol>
 
                     <p class="card-text">
-                        En Windows se requieren pasos similares. En la ausencia de fallas del sistema, el orden en el
-                        que se realizan estos pasos no importa; en la presencia de fallas, sí. Suponga que se completa
-                        el primer paso y después el sistema falla.
+                        En Windows, se requieren pasos similares. En ausencia de fallos del sistema, el orden en que se ejecutan estos pasos no es relevante; pero en presencia de fallos, sí lo es. Suponga que se completa el primer paso y luego el sistema falla.
                     </p>
 
                     <p class="card-text">
-                        El nodo-i y los bloques de archivo no estarán accesibles desde ningún archivo, pero tampoco estarán disponibles para
-                        ser reasignados; sólo se encuentran en alguna parte del limbo, disminuyendo los recursos disponibles. Si la falla
-                        ocurre después del siguiente paso, sólo se pierden los bloques.
+                        El nodo-i y los bloques del archivo no serán accesibles desde ningún archivo, pero tampoco estarán disponibles para ser reasignados; simplemente quedarán en una especie de limbo, reduciendo la eficiencia del sistema.
                     </p>
 
                     <p class="card-text">

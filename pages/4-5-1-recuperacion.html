@@ -54,47 +54,38 @@
                 <h5 class="card-header">4.5.1 Recuperación</h5>
                 <div class="card-body">
                     <p class="card-text">
-                        Para comprender cómo se pueden recuperar los archivos de un disco, es útil comprender cómo se
-                        almacenan los archivos
-                        en los discos duros antes de que se pierdan.
-                        La mayoría de los sistemas operativos modernos dividen (o "particionan") todo el disco duro
-                        físico en una o varias
-                        partes independientes ("particiones").
-                        En las familias de sistemas operativos basados en DOS / Windows, estas particiones se denominan
-                        "discos lógicos". A
-                        los discos lógicos se les asigna letras de unidad y etiquetas descriptivas opcionales.
+                        Para entender cómo recuperar archivos de un disco, es importante saber cómo se almacenan en los
+                        discos duros antes de que se pierdan. La mayoría de los sistemas operativos actuales dividen (o
+                        "particionan") el disco duro físico en una o varias secciones independientes ("particiones").
                     </p>
                     <p class="card-text">
                         <strong>Figura 14. Registro de particiones.</strong>
                     </p>
-                   
+
                     <div class="text-center">
-                        <a href="https://www.ecured.cu/images/0/04/Reg_a_princ.jpg" target="_blank"><img src="../images/figura9.png" alt="Figura 14" class="img-fluid"></a>
+                        <a href="https://www.ecured.cu/images/0/04/Reg_a_princ.jpg" target="_blank"><img
+                                src="../images/figura9.png" alt="Figura 14" class="img-fluid"></a>
                     </div>
                     <p class="card-text">
                         La información sobre archivos y carpetas contiene registros de archivos que almacenan nombres de
-                        archivo, tamaños, fecha/hora y otra información técnica. Esta información también incluye las
-                        ubicaciones físicas exactas (direcciones) de los datos del archivo en el disco. Esta información
-                        generalmente se respalda en la propia unidad, en caso de que la primera copia se dañe.
+                        archivo,
+                        tamaños, fecha/hora y otra información técnica. Esta información también incluye las ubicaciones
+                        físicas
+                        exactas (direcciones) de los datos del archivo en el disco. Esta información generalmente se
+                        respalda en la
+                        propia unidad, en caso de que la primera copia se dañe.
                     </p>
                     <p class="card-text">
-                        Los distintos sistemas de ficheros tienen diferentes formas de almacenar esta información. Por
-                        ejemplo, el sistema de archivos FAT almacena esta información en una tabla de asignación de
-                        archivos (FAT, por sus siglas en inglés), mientras que el sistema de archivos NTFS la almacena
-                        en una tabla de archivos maestra (MFT, por sus siglas en inglés).
+                        Diversos sistemas de archivos utilizan distintos métodos para almacenar esta información. Por
+                        ejemplo, el sistema de archivos FAT guarda estos datos en una tabla de asignación de archivos
+                        (FAT, por sus siglas en inglés), mientras que el sistema de archivos NTFS lo hace en una tabla
+                        de archivos maestra (MFT, por sus siglas en inglés).
                     </p>
+
                     <p class="card-text">
-                        Cuando un ordenador necesita leer un fichero, primero va a la información sobre archivos y
-                        carpetas y busca el registro de ese archivo. Luego, busca la dirección del archivo, va al lugar
-                        especificado en el disco y entonces lee los datos del fichero.
-                    </p>
-                    <p class="card-text">
-                        Cuando un ordenador quiere eliminar un archivo, no destruye sus datos de inmediato. En su lugar,
-                        realiza algunos cambios en la información sobre archivos y carpetas para indicar que el archivo
-                        se ha eliminado. Algunos sistemas operativos simplemente marcan el archivo como eliminado,
-                        conservando todos los metadatos sobre el archivo hasta que sea necesario sobrescribirlo con
-                        metadatos sobre un nuevo archivo. Así es como los sistemas de archivos de Windows manejan las
-                        eliminaciones.
+                        Cuando una computadora necesita acceder a un archivo, primero consulta los datos sobre archivos
+                        y directorios para encontrar el registro de ese archivo. Luego, localiza la dirección del
+                        archivo, se dirige al lugar indicado en el disco y procede a leer los datos del archivo.
                     </p>
                 </div>
             </div>
@@ -130,9 +121,7 @@
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Este método intenta recuperar archivos mediante el análisis de la información
-                                        sobre archivos y carpetas. Puede recuperar archivos con sus nombres, rutas,
-                                        marcas de fecha/hora y datos completos si tiene éxito.
+                                        Esta técnica trata de restaurar archivos analizando los datos relativos a archivos y directorios. Si tiene éxito, puede recuperar archivos junto con sus nombres, rutas, fechas y horas, y datos completos.
                                     </p>
                                 </div>
                             </div>
@@ -148,9 +137,7 @@
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Busca tipos de archivos conocidos analizando el disco en busca de firmas de
-                                        archivos. Este método es eficaz para recuperar archivos incluso si el primer
-                                        método falla.
+                                        Este método implica identificar tipos de archivos conocidos examinando el disco en busca de patrones específicos o "firmas" de archivos. Mediante esta técnica, se pueden localizar y recuperar archivos incluso si la información del directorio se ha perdido.
                                     </p>
                                 </div>
                             </div>
@@ -162,7 +149,8 @@
                             <a class="page-link" href="introduccion-4.html">Anterior</a>
                         </li>
                         <li class="page-item"><a class="page-link" href="introduccion-5.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="4-5-optimizacion-del-sistema-de-archivos.html">2</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-5-optimizacion-del-sistema-de-archivos.html">2</a></li>
                         <li class="page-item active"><a class="page-link" href="4-5-1-recuperacion.html">3</a></li>
                         <li class="page-item"><a class="page-link" href="4-5-2-consistencia.html">4</a></li>
                         <li class="page-item"><a class="page-link" href="4-5-3-rendimiento.html">5</a></li>
@@ -171,7 +159,7 @@
                             <a class="page-link" href="bibliografia.html">Lista de referencias</a>
                         </li>
                     </ul>
-                    
+
                 </div>
             </div>
         </section>

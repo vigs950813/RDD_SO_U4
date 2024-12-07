@@ -54,15 +54,15 @@
         <h5 class="card-header">4.1.1 Capa del sistema de archivos</h5>
         <div class="card-body">
           <p class="card-text">
-            La capa del sistema de archivos se encarga de gestionar operaciones básicas sobre archivos y directorios, como su
-            creación, modificación, lectura y eliminación. Sirve como interfaz entre aplicaciones y hardware, ocultando la
-            complejidad de las operaciones de bajo nivel realizadas en dispositivos de almacenamiento. Esta capa está compuesta
-            por varias subcapas, cada una con un rol específico en la gestión de datos.
+            La capa del sistema de archivos se encarga de manejar tareas fundamentales sobre archivos y directorios,
+            tales como su creación, modificación, lectura y eliminación. Actúa como una interfaz entre las aplicaciones
+            y el hardware, ocultando la complejidad de las operaciones de bajo nivel que se llevan a cabo en los
+            dispositivos de almacenamiento. Esta capa se compone de diversas subcapas, cada una desempeñando un rol
+            específico en la administración de datos.
           </p>
           <p class="card-text">
-            La capa del sistema de archivos se puede dividir en varias subcapas o
-            componentes, cada una con un rol específico en la gestión de los datos. Estas
-            subcapas incluyen:
+            La capa del sistema de archivos se puede segmentar en múltiples subcapas o componentes, cada uno con una
+            función particular en la gestión de los datos. Estas subcapas incluyen:
           </p>
           <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
@@ -76,9 +76,10 @@
               <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                 <div class="accordion-body">
                   <p class="card-text">
-                    Esta parte del sistema de archivos actúa como un intermediario entre los usuarios, las aplicaciones y el sistema de
-                    archivos, permitiendo realizar operaciones básicas como abrir, cerrar, leer y escribir archivos. En sistemas como UNIX
-                    y Linux, estas acciones se gestionan mediante llamadas al sistema como open(), read(), write() y close().
+                    Esta sección del sistema de archivos funciona como un intermediario entre los usuarios, las
+                    aplicaciones y el sistema de archivos, permitiendo ejecutar tareas fundamentales como abrir, cerrar,
+                    leer y escribir archivos. En sistemas como UNIX y Linux, estas funciones se gestionan mediante
+                    llamadas al sistema como open(), read(), write() y close().
                   </p>
                   <p class="card-text">
                     <strong>Código 1.</strong>
@@ -106,12 +107,17 @@
               </h2>
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                  <p class="card-text"> La capa del sistema de archivos gestiona los nombres de archivos y la estructura de directorios, permitiendo a los usuarios organizar sus archivos en carpetas y subcarpetas. Utiliza una tabla de directorios para almacenar ubicaciones. También es responsable de la asignación y administración del espacio en el almacenamiento, decidiendo cómo se asignan bloques de disco y optimizando el almacenamiento para reducir la fragmentación. Los sistemas de archivos emplean diversas estrategias para asignar espacio, como bloques en ext4 y clústeres en NTFS. </p>
+                  <p class="card-text">La capa del sistema de archivos maneja los nombres de archivos y la estructura de
+                    carpetas, permitiendo a los usuarios organizar sus archivos en directorios y subdirectorios. Utiliza
+                    una tabla de carpetas para almacenar ubicaciones. También es responsable de la distribución y
+                    administración del espacio en el almacenamiento, decidiendo cómo se asignan bloques de disco y
+                    optimizando el almacenamiento para minimizar la fragmentación. Los sistemas de archivos utilizan
+                    diversas estrategias para distribuir espacio, como bloques en ext4 y clústeres en NTFS.
+                  </p>
                   <p class="card-text">
-                    Por ejemplo, en sistemas operativos como <a href="glosario.html" target="_blank">Linux</a>, la estructura jerárquica se organiza
-                    en forma de árbol, donde el directorio raíz (/) es la raíz del sistema de archivos, y
-                    debajo de él se encuentran otros directorios y archivos organizados de manera
-                    recursiva.
+                    Por ejemplo, en sistemas operativos como Linux, la estructura jerárquica se organiza en forma de
+                    árbol, donde el directorio raíz (/) es la raíz del sistema de archivos, y debajo de él se encuentran
+                    otros directorios y archivos organizados de manera recursiva.
                   </p>
                   <p class="card-text">
                     <strong>Figura 5. Ejemplo de jerarquía de directorios.</strong>
@@ -136,19 +142,17 @@
               </h2>
               <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                  <p class="card-text">Esta subcapa es responsable de la asignación y administración del espacio en el
-                    dispositivo de almacenamiento. Cada vez que se crea un archivo o se amplía, el
-                    sistema de archivos debe decidir cómo asignar bloques de disco para almacenar los
-                    datos. La gestión eficiente del espacio en disco incluye la localización de bloques
-                    libres, la liberación de bloques que ya no se necesitan y la optimización del
-                    almacenamiento para reducir la fragmentación.</p>
-                  <p class="card-text">Los sistemas de archivos utilizan diferentes estrategias para asignar espacio en
-                    disco. Algunos, como el sistema de archivos <a href="glosario.html" target="_blank">ext4</a> en Linux, utilizan una estrategia
-                    basada en bloques, donde los archivos se dividen en bloques de tamaño fijo que se
-                    asignan de manera contigua cuando es posible. Otros sistemas de archivos, como
-                    <a href="glosario.html" target="_blank">NTFS</a> en Windows, utilizan una estructura de clústeres y pueden
-                    fragmentar un
-                    archivo en múltiples ubicaciones si no hay espacio contiguo suficiente.
+                  <p class="card-text">Esta subcapa se encarga de la distribución y gestión del espacio en el
+                    dispositivo de almacenamiento. Cada vez que se genera un archivo o se amplía, el sistema de archivos
+                    debe determinar cómo asignar bloques de disco para guardar los datos. La gestión eficiente del
+                    espacio en disco incluye la identificación de bloques libres, la liberación de bloques que ya no se
+                    requieren y la optimización del almacenamiento para minimizar la fragmentación.</p>
+                  <p class="card-text">Los sistemas de archivos utilizan diferentes estrategias para distribuir espacio
+                    en disco. Algunos, como el sistema de archivos ext4 en Linux, utilizan una estrategia basada en
+                    bloques, donde los archivos se dividen en bloques de tamaño fijo que se asignan de manera contigua
+                    cuando es posible. Otros sistemas de archivos, como NTFS en Windows, utilizan una estructura de
+                    clústeres y pueden fragmentar un archivo en múltiples ubicaciones si no hay espacio contiguo
+                    suficiente.
                   </p>
                 </div>
               </div>
@@ -163,9 +167,11 @@
               </h2>
               <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                  <p class="card-text">Administra metadatos como permisos, fechas y tamaños, asegurando su sincronización con los datos correspondientes.</p>
+                  <p class="card-text">Administra metadatos como permisos, fechas y tamaños, asegurando su
+                    sincronización con los datos correspondientes.</p>
                   <p class="card-text">
-                    Por ejemplo, en sistemas como <a href="glosario.html" target="_blank">ext4</a>, los metadatos se almacenan en inodos, que
+                    Por ejemplo, en sistemas como <a href="glosario.html" target="_blank">ext4</a>, los metadatos se
+                    almacenan en inodos, que
                     contienen toda la información necesaria para localizar los datos de un archivo en el
                     disco y para mantener los atributos del archivo. Cada archivo y directorio tiene un
                     inodo asociado que el sistema utiliza para gestionar su ubicación y propiedades.
@@ -192,22 +198,24 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseFive">
-                  Control de acceso y permisos
+                  Gestión de acceso y permisos
                 </button>
               </h2>
               <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                  <p class="card-text">Implementa control de acceso y permisos, fundamentales para la seguridad en sistemas multiusuario, utilizando esquemas numéricos o simbólicos.</p>
+                  <p class="card-text">Fundamentales para la integridad en
+                    sistemas multiusuario, utilizando esquemas numéricos o simbólicos.</p>
                   <p class="card-text">Los permisos generalmente se representan utilizando un esquema numérico o
-                    simbólico, como en los sistemas basados en <a href="glosario.html" target="_blank">UNIX</a>, donde los permisos se dividen
+                    simbólico, como en los sistemas basados en <a href="glosario.html" target="_blank">UNIX</a>, donde
+                    los permisos se dividen
                     en tres grupos: propietario, grupo y otros, con permisos de lectura (r), escritura (w) y
                     ejecución (x).</p>
-                    <p class="card-text">
-                      <strong>Código 3.</strong>
-                    </p>
-                    <p class="card-text">
-                      <i>Asignación de permisos.</i>
-                    </p>
+                  <p class="card-text">
+                    <strong>Código 3.</strong>
+                  </p>
+                  <p class="card-text">
+                    <i>Asignación de permisos.</i>
+                  </p>
                   <p class="text-center">
                     <img src="../images/codigo3.png" class="img-fluid" alt="Código 3">
                   </p>
@@ -224,16 +232,15 @@
         <h5 class="card-header cardExample">Ejemplo práctico: Función de la capa del sistema de archivos</h5>
         <div class="card-body">
           <p class="card-text">
-            Supongamos que un usuario desea copiar un archivo de un directorio a otro en un
-            sistema de archivos UNIX. Este proceso implica varias operaciones que son
+            Supongamos que alguien desea copiar un archivo de un directorio a otro. Este proceso implica varias operaciones que son
             gestionadas por la capa del sistema de archivos:
           </p>
           <ol type="1" class="card-text">
-            <li>El sistema de archivos busca en la tabla de directorios la ubicación física del
-              archivo en el disco</li>
-            <li>Se acceden a los bloques de disco que contienen los datos del archivo y se
+            <li>Busca en la tabla de directorios el lugar físico del
+              archivo en el dispositivo de almacenamiento.</li>
+            <li>Se acceden segmentos del dispositivo de almacenamiento que tienen información de los ficheros y se
               copian en la memoria</li>
-            <li>Se crea una nueva entrada en la tabla de directorios del destino, asociando un
+            <li>Se genera nuevamente entrada a la tabla de directorios del destino, asociando un
               nuevo inodo al archivo copiado</li>
             <li>Se asignan bloques de disco libres para almacenar los datos en la nueva
               ubicación</li>
@@ -241,19 +248,19 @@
               los permisos</li>
           </ol>
 
-          <p class="card-text">Este proceso es completamente gestionado por la capa del sistema de archivos, sin
+          <p class="card-text">Este proceso es completamente administrado bajo la capa del sistema de archivos, sin
             que el usuario necesite conocer los detalles de la asignación de bloques o el manejo
             de inodos.</p>
-          <p class="card-text">La capa del sistema de archivos es una parte esencial en la estructura del sistema
-            operativo que facilita la interacción entre los usuarios y las aplicaciones con los
+          <p class="card-text">Es una parte esencial en la estructura del sistema
+            operativo que facilita el intercambio entre los usuarios y las aplicaciones con los
             datos almacenados en el sistema. A través de múltiples subcapas, como la interfaz
             de usuario, la gestión de nombres y directorios, la asignación de espacio en disco, y
             el control de acceso, esta capa abstrae la complejidad de las operaciones en los
             dispositivos de almacenamiento, ofreciendo una interfaz coherente y eficiente para
             el manejo de los archivos.</p>
 
-            <br>
-         
+          <br>
+
           <ul class="pagination justify-content-end">
             <li class="page-item">
               <a class="page-link" href="../index.html">Anterior</a>

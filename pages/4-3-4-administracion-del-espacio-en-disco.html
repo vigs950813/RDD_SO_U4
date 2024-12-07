@@ -73,13 +73,13 @@
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        El sistema mantiene una lista enlazada de todos los bloques libres. Cuando se
+                                        El sistema resguarda una lista enlazada de todos los bloques no ocupados. Si se
                                         necesita un bloque para un archivo, el sistema toma el primer bloque de la lista
                                         y lo
                                         asigna al archivo.
                                     </p>
                                     <p class="card-text">
-                                        Por ejemplo, Si el disco tiene bloques libres en las posiciones 5, 10, y 20, el
+                                        Si el dispositivo de almacenamiento contiene segmentos libres en las posiciones 5, 10, y 20, el
                                         sistema de
                                         archivos puede mantener una lista enlazada como 5 → 10 → 20 . Cuando se
                                         necesita un bloque, el sistema toma el bloque 5 y actualiza la lista a 10 → 20.
@@ -154,7 +154,7 @@
                         almacenan los archivos en un sistema de archivos. La asignación contigua ofrece
                         un acceso rápido, pero puede sufrir fragmentación externa; la asignación ligada
                         resuelve la fragmentación pero introduce acceso más lento; y la asignación
-                        indexada ofrece acceso eficiente y flexible. La administración del espacio en disco
+                        indexada ofrece acceso eficiente y flexible. La gestión de espacio en dispositivos de almacenamiento
                         asegura que los bloques libres se gestionen de manera óptima para maximizar la
                         utilización del espacio y mantener un rendimiento adecuado del sistema de archivos.
                     </p>

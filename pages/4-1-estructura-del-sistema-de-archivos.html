@@ -96,11 +96,11 @@
 
 
           <p class="card-text">
-            En algunos sistemas (como UNIX) las extensiones de archivo son sólo convenciones y no son impuestas por los
-            sistemas operativos. Un archivo llamado archivo.txt podría ser algún tipo de archivo de texto, pero ese
-            nombre es más un recordatorio para el propietario que un medio para transportar información a la
-            computadora. Por otro lado, un compilador de C podría insistir que los archivos que va a compilar terminen
-            con .c y podría rehusarse a compilarlos si no tienen esa terminación.
+            En ciertos sistemas (como UNIX), las extensiones de archivo son simplemente convenciones y no están
+            impuestas por los sistemas operativos. Un archivo denominado archivo.txtpodría ser algún tipo de archivo de
+            texto, pero ese nombre es más un recordatorio para el propietario que una forma de transmitir información a
+            la computadora. Por otro lado, un compilador de C podría exigir que los archivos que va a compilar tengan la
+            extensión .c y podría negarse a compilarlos si no poseen esa terminación.
           </p>
 
           <p class="card-text"><strong>Estructura de archivos</strong></p>
@@ -144,13 +144,13 @@
           <p class="card-text"><strong>Tipos de archivos</strong></p>
 
           <p class="card-text">
-            Los sistemas operativos soportan varios tipos de archivos. Por ejemplo, UNIX y Windows tienen archivos y
-            directorios regulares. UNIX también tiene archivos especiales de caracteres y de bloques. Los archivos
-            regulares son los que contienen información del usuario. Todos los archivos de la Figura 2 son archivos
-            regulares. Los directorios son sistemas de archivos para mantener la estructura del sistema de archivos.
-            Los archivos especiales de caracteres se relacionan con
-            la entrada/salida y se utilizan para modelar dispositivos de E/S en serie, tales como terminales, impresoras
-            y redes. Los archivos especiales de bloques se utilizan para modelar discos.
+            Los sistemas operativos admiten diversos tipos de archivos. Por ejemplo, tanto UNIX como Windows manejan
+            archivos y directorios comunes. Además, UNIX posee archivos especiales de caracteres y bloques. Los archivos
+            comunes son aquellos que contienen la información del usuario. Todos los archivos mostrados en la Figura 2
+            son archivos comunes. Los directorios funcionan como sistemas de archivos para mantener la organización de
+            la estructura del sistema de archivos. Los archivos especiales de caracteres están asociados con las
+            operaciones de entrada/salida y se utilizan para representar dispositivos de E/S en serie, como terminales,
+            impresoras y redes.
           </p>
 
           <p class="card-text">
@@ -172,11 +172,7 @@
           </div>
 
           <p class="card-text">
-            (b) Un archivo binario es un archivo, también de UNIX. Consiste en una colección de procedimientos (módulos)
-            de biblioteca compilados, pero no enlazados. A cada uno se le antepone un encabezado que indica su nombre,
-            fecha de creación, propietario, código de protección y tamaño. Al igual que en el caso del archivo
-            ejecutable, los encabezados de los módulos están llenos de números binarios. Al copiarlos a la impresora se
-            produciría basura como salida.
+            (b) Un archivo binario es un tipo de archivo en UNIX. Está compuesto por una colección de procedimientos o módulos de biblioteca que han sido compilados pero no enlazados. A cada módulo se le agrega un encabezado que especifica su nombre, fecha de creación, propietario, código de protección y tamaño. Al igual que los archivos ejecutables, los encabezados de estos módulos contienen números binarios. Intentar imprimirlos directamente en una impresora resultaría en una salida ininteligible.
           </p>
 
           <p class="card-text">
@@ -187,37 +183,24 @@
           <p class="card-text"><strong>Acceso a archivos</strong></p>
 
           <p class="card-text">
-            Los primeros sistemas operativos proporcionaban sólo un tipo de acceso: acceso secuencial. En estos
-            sistemas, un proceso podía leer todos los bytes o registros en un archivo en orden, empezando desde el
-            principio, pero no podía saltar algunos y leerlos fuera de orden. Sin embargo, los archivos secuenciales
-            podían rebobinarse para poder leerlos todas las veces que fuera necesario. Los archivos secuenciales eran
-            convenientes cuando el medio de almacenamiento era cinta magnética en vez de disco.
+            Los sistemas operativos iniciales solo ofrecían un tipo de acceso: secuencial. En estos sistemas, un proceso podía leer todos los bytes o registros de un archivo en orden, comenzando desde el principio, pero no podía saltar algunos y leerlos de manera desordenada. Sin embargo, los archivos secuenciales podían rebobinarse para ser leídos tantas veces como fuera necesario. Estos archivos eran prácticos cuando el medio de almacenamiento era cinta magnética en lugar de disco.
           </p>
 
           <p class="card-text">
-            Cuando se empezó a usar discos para almacenar archivos, se hizo posible leer los bytes o registros de un
-            archivo fuera de orden, pudiendo acceder a los registros por llave en vez de posición. Los archivos cuyos
-            bytes o registros se pueden leer en cualquier orden se llaman archivos de acceso aleatorio. Son requeridos
-            por muchas aplicaciones.
+            Con la adopción de discos para almacenar archivos, se hizo posible leer los bytes o registros de un archivo de forma desordenada, permitiendo el acceso a los registros por clave en lugar de por posición. Los archivos que permiten la lectura de bytes o registros en cualquier orden se conocen como archivos de acceso aleatorio. Estos son indispensables para muchas aplicaciones.
           </p>
 
           <p class="card-text">
-            Los archivos de acceso aleatorio son esenciales para muchas aplicaciones, como los sistemas de bases de
-            datos. Si el cliente de una aerolínea llama y desea reservar un asiento en un vuelo específico, el programa
-            de reservación debe poder tener acceso al registro para ese vuelo sin tener que leer primero los miles de
-            registros de otros vuelos.
+            Los archivos de acceso aleatorio son cruciales para múltiples aplicaciones, como los sistemas de bases de datos. Si un cliente de una aerolínea llama y desea reservar un asiento en un vuelo específico, el programa de reservaciones debe poder acceder al registro de ese vuelo sin necesidad de leer primero los miles de registros de otros vuelos.
           </p>
 
           <p class="card-text"><strong>Atributos de archivos</strong></p>
 
           <p class="card-text">
-            Todo archivo tiene un nombre y sus datos. Además, todos los sistemas operativos asocian otra información con
-            cada archivo; como puede ser, la fecha y hora de la última modificación del archivo y su tamaño. A estos
-            elementos adicionales les llamaremos atributos del archivo. A ellos se les conoce como metadatos. La lista
-            de atributos varía considerablemente de un sistema a otro.
+            Cada archivo cuenta con un nombre y su contenido. Adicionalmente, los sistemas operativos asocian otros detalles con cada archivo, como la fecha y hora de su última modificación y su tamaño. A estos detalles adicionales los denominamos atributos del archivo, conocidos también como metadatos. La lista de estos atributos puede variar significativamente entre diferentes sistemas operativos.
           </p>
 
-          <p class="card-text">La siguiente Figura 4 muestra algunas de las posibilidades, pero existen otras.
+          <p class="card-text">La siguiente Figura 4 ejemplifica algunas de las tantas alternativas existentes.
 
           <p class="card-text"><strong>Figura 4. Algunos posibles atributos de archivos.</strong></p>
 
@@ -226,30 +209,19 @@
           </div>
 
           <p class="card-text">
-            Los primeros cuatro atributos se relacionan con la protección del archivo e indican quién puede acceder a él
-            y quién no. En algunos sistemas, el usuario debe presentar una contraseña para acceder a un archivo, en cuyo
-            caso la contraseña debe ser uno de los atributos. Las banderas son bits o campos cortos que controlan o
-            habilitan cierta propiedad específica, así como la bandera temporal permite marcar un archivo para la
-            eliminación automática cuando el proceso que lo creó termina.
+            Los cuatro primeros atributos están relacionados con la seguridad del archivo y especifican quién tiene permiso para acceder a él y quién no. En ciertos sistemas, el usuario debe ingresar una contraseña para acceder a un archivo; en este caso, la contraseña se convierte en uno de los atributos del archivo. Las banderas son bits o campos cortos que activan o desactivan una propiedad particular. Por ejemplo, la bandera temporal permite que un archivo sea marcado para eliminación automática una vez que el proceso que lo creó finaliza.
           </p>
 
           <p class="card-text">
-            Los campos longitud de registro, posición de llave y longitud de llave sólo están presentes en los archivos
-            en cuyos registros se pueden realizar búsquedas mediante el uso de una llave. Ellos proporcionan la
-            información requerida para buscar las llaves.
+            Los campos de longitud de registro, posición de clave y longitud de clave solo se encuentran en archivos cuyos registros se pueden buscar mediante una clave. Estos campos proporcionan la información necesaria para localizar las claves.
           </p>
 
           <p class="card-text">
-            Los diversos tiempos llevan la cuenta de cuándo se creó el archivo, su acceso y su modificación más
-            recientes. Éstos son útiles para una variedad de propósitos.
+            Los diferentes marcadores de tiempo registran la fecha de creación del archivo, así como sus accesos y modificaciones más recientes. Estos datos son útiles para una variedad de fines.
           </p>
 
           <p class="card-text">
-            El tamaño actual indica qué tan grande es el archivo en el presente. Algunos sistemas operativos de
-            computadoras mainframe antiguas requieren que se especifique el tamaño máximo a la hora de crear el archivo,
-            para poder permitir que el sistema operativo reserve la cantidad máxima de almacenamiento de antemano. Los
-            sistemas operativos de estaciones de trabajo y computadoras personales son lo bastante inteligentes como
-            para arreglárselas sin esta característica.
+            El tamaño actual del archivo muestra cuán grande es en el momento presente. Algunos sistemas operativos de computadoras mainframe antiguas requieren especificar el tamaño máximo al crear el archivo, para que el sistema operativo pueda reservar previamente la cantidad máxima de almacenamiento. Los sistemas operativos de estaciones de trabajo y computadoras personales son lo suficientemente avanzados como para manejar esta situación sin necesidad de esa especificación.
           </p>
 
           <p class="card-text">
@@ -305,7 +277,7 @@
               <td>.md, .rst</td>
             </tr>
           </table>
-          
+
 
           <p class="card-text">
             <strong>Tipo Binario</strong><br>
