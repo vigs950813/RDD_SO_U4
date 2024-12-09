@@ -55,33 +55,54 @@
                 <div class="card-body">
 
                     <p class="card-text">
-                        Si bien los sistemas de archivos basados en registros son una propuesta interesante, no se emplean de manera extendida, en parte debido a su significativa incompatibilidad con los sistemas de archivos actuales. No obstante, uno de los conceptos implícitos en ellos, la resistencia a fallas, se puede incorporar fácilmente a sistemas de archivos más tradicionales.
+                        Si bien los sistemas de archivos basados en registros son una propuesta interesante, no se
+                        emplean de manera extendida, en parte debido a su significativa incompatibilidad con los
+                        sistemas de archivos actuales. No obstante, uno de los conceptos implícitos en ellos, la
+                        resistencia a fallas, se puede incorporar fácilmente a sistemas de archivos más tradicionales.
                     </p>
 
                     <p class="card-text">
-                        El concepto principal es mantener un registro de las acciones que realizará el sistema de archivos antes de ejecutarlas. Así, si el sistema falla antes de completar la tarea prevista, al reiniciar el sistema puede consultar el registro para identificar lo que estaba sucediendo en el momento del fallo y finalizar la tarea.
+                        La idea es guardar la identificación de las acciones en donde se realicen antes de ejecutarlas.
+                        Así, si llegara a tener inconvenientes antes de completar la tarea prevista, al volver a
+                        inicializar el sistema, podrá visualizar su registro para identificar lo que estaba sucediendo
+                        en el momento del inconveniente y con ello finalizar la acción requerida.
+
                     </p>
 
                     <p class="card-text">
-                        Estos sistemas de archivos, denominados sistemas de archivos con registro (Journaling Files System, JFS), están en uso actualmente. El sistema de archivos NTFS de Microsoft, así como los sistemas ext3 y ReiserFS de Linux, son ejemplos de sistemas con registro.
+                        Estos sistemas de archivos, denominados registro (Sistema de archivos de diario
+                        , JFS), se utilizan en el momento. Es por ello por lo que NTFS (Sistema de archivos de nueva
+                        tecnología) de Microsoft, considerando también ext3 y ReiserFS de Linux, son ejemplos de
+                        sistemas con registro.
+
                     </p>
 
                     <p class="card-text">
-                        Para comprender la naturaleza del problema, considere una operación sencilla que ocurre frecuentemente: eliminar un archivo. Esta operación (en UNIX) implica tres pasos:
+                        Para comprender la importancia del problema, identifique la ejecución de una acción sencilla que
+                        ocurre frecuentemente al eliminar un archivo. Esta operación (en UNIX) implica tres pasos:
+
                     </p>
 
                     <ol class="card-text" type="1">
-                        <li>Eliminar el archivo de su directorio</li>
-                        <li>Liberar el nodo-i y transferirlo a la reserva de nodos-i disponibles</li>
-                        <li>Devolver todos los bloques de disco a la reserva de bloques de disco libres</li>
+                        <li>Eliminar el archivo de su ubicación dentro de la estructura</li>
+                        <li>Soltar el nodo-i y transferirlo a la protección de nodos-i disponibles
+                        </li>
+                        <li>Restituir todos los bloques de disco a la protección de agrupación de dispositivo libres
+                        </li>
                     </ol>
 
                     <p class="card-text">
-                        En Windows, se requieren pasos similares. En ausencia de fallos del sistema, el orden en que se ejecutan estos pasos no es relevante; pero en presencia de fallos, sí lo es. Suponga que se completa el primer paso y luego el sistema falla.
+                        En Windows. Cuando no existe inconvenientes en el orden en que se ejecutan estos pasos no es
+                        relevante; pero en cuando existe inconvenientes, sí lo es. Por lo que si se termina el primer
+                        paso y puede existir que posteriormente presente algún inconveniente.
+
                     </p>
 
                     <p class="card-text">
-                        El nodo-i y los bloques del archivo no serán accesibles desde ningún archivo, pero tampoco estarán disponibles para ser reasignados; simplemente quedarán en una especie de limbo, reduciendo la eficiencia del sistema.
+                        El nodo-i y la organización de los archivos no permitirán que se pueda acceder a ningún tipo de
+                        fichero, por lo que no habrá la posibilidad para ser reasignados; simplemente quedarán en una
+                        especie de espacio, reduciendo la eficiencia del sistema.
+
                     </p>
 
                     <p class="card-text">
@@ -91,7 +112,7 @@
                     <div class="text-center">
                         <img src="../images/figura8.png" alt="Figura 13" class="img-fluid">
                     </div>
-                    
+
 
                     <br>
 
@@ -100,14 +121,15 @@
                             <a class="page-link" href="introduccion-3.html">Anterior</a>
                         </li>
                         <li class="page-item"><a class="page-link" href="introduccion-4.html">1</a></li>
-                        <li class="page-item"><a class="page-link" href="4-4-sistemas-de-archivos-estructurados.html">2</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="4-4-sistemas-de-archivos-estructurados.html">2</a></li>
                         <li class="page-item active"><a class="page-link" href="4-4-1-por-bitacoras.html">3</a></li>
                         <li class="page-item"><a class="page-link" href="4-4-2-por-diario.html">4</a></li>
                         <li class="page-item"><a class="page-link" href="actividad-4.html">5</a></li>
                         <li class="page-item">
                             <a class="page-link" href="introduccion-5.html">Siguiente Tema</a>
                     </ul>
-                    
+
 
                 </div>
             </div>

@@ -61,10 +61,11 @@
                         en un dispositivo, el sistema operativo necesita mantener información adicional como el nombre
                         del archivo, su tamaño, los permisos, las fechas en que fue creado y modificado, y su ubicación
                         en el disco para poder acceder a él fácilmente.</p>
+
                     <p class="card-text">Los archivos se almacenan en bloques de disco, y la forma en que estos bloques
-                        se
-                        asignan y organizan puede variar según el sistema de archivos. Hay tres métodos
-                        comunes de implementación:</p>
+                        se asignan y organizan puede variar según el sistema de archivos. Hay tres métodos comunes de
+                        implementación:</p>
+
 
                     <div class="accordion" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
@@ -78,11 +79,12 @@
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Los datos se almacenan en el dispositivo en bloques uno detrás del otro, lo que
+                                        os datos se almacenan en el dispositivo en bloques uno detrás del otro, lo que
                                         permite acceder a ellos rápidamente sin necesidad de saltar entre partes del
                                         disco. Sin embargo, este método tiene un problema: con el tiempo, puede ser
                                         difícil encontrar un espacio grande y continuo para guardar nuevos archivos
                                         debido a la fragmentación del disco.
+
                                     </p>
                                     <div class="card">
                                         <div class="card-header-example">
@@ -94,12 +96,12 @@
                                                 punteros, lo que significa que los bloques no tienen que estar juntos.
                                                 Cada bloque tiene un puntero al siguiente, lo que facilita la
                                                 organización del espacio en el disco. Sin embargo, esto hace que el
-                                                acceso a los archivos sea más lento, ya que hay que seguir las direcciones de memoria de un bloque a otro.
-
-                                                Por ejemplo, en sistemas operativos como Linux, los archivos y carpetas
-                                                se organizan de forma jerárquica, similar a un árbol. La raíz del
-                                                de este sistema suele ser representado con "/", y debajo de él hay más
-                                                directorios y archivos organizados de manera recursiva.
+                                                acceso a los archivos sea más lento, ya que hay que seguir las
+                                                direcciones de memoria de un bloque a otro. Por ejemplo, en sistemas
+                                                operativos como Linux, los archivos y carpetas se organizan de forma
+                                                jerárquica, similar a un árbol. La raíz del de este sistema suele ser
+                                                representada con "/", y debajo de él hay más directorios y archivos
+                                                organizados de manera recursiva.
                                             </p>
                                         </div>
                                     </div>
@@ -159,25 +161,15 @@
                             </h2>
                             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    <p class="card-text">Los sistemas de archivos modernos, como ext4, utilizan la
-                                        asignación indexada, en
-                                        la que un bloque especial (llamado bloque de índice o inodo) contiene los
-                                        punteros a
-                                        los bloques de datos del archivo. Esto permite un acceso más eficiente y elimina
-                                        la
-                                        necesidad de bloques contiguos o enlaces entre bloques de datos. La
-                                        fragmentación se reduce considerablemente y se optimiza el acceso a los
-                                        archivos.</p>
+                                    <p class="card-text">Los sistemas de archivos modernos, como ext4, utilizan la asignación indexada, en la que un bloque especial (llamado bloque de índice o inodo) contiene los punteros a los bloques de datos del archivo. Esto permite un acceso más eficiente y elimina la necesidad de bloques contiguos o enlaces entre bloques de datos. La fragmentación se reduce considerablemente y se optimiza el acceso a los archivos.</p>
                                     <div class="card">
                                         <div class="card-header-example">
                                             Ejemplo
                                         </div>
                                         <div class="card-body">
                                             <p class="card-text">
-                                                Supongamos que un archivo está almacenado en los bloques 5, 30, 45, y
-                                                70. El sistema de archivos crea un inodo que
-                                                contiene punteros a estos bloques, y el sistema operativo accede
-                                                directamente a los bloques a través del inodo.
+                                                Supongamos que un archivo está almacenado en los bloques 5, 30, 45, y 70. El sistema de archivos crea un inodo que contiene punteros a estos bloques, y el sistema operativo accede directamente a los bloques a través del inodo.
+
                                             </p>
                                         </div>
                                     </div>

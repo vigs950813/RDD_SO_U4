@@ -54,23 +54,22 @@
             <div class="card">
                 <h5 class="card-header">4.3.1 Contigua</h5>
                 <div class="card-body">
-                    <p class="card-text">
-                        La <strong>asignación contigua</strong> es uno de los métodos más sencillos para almacenar
-                        archivos en el disco. En este esquema, se asigna a cada fichero una serie de
-                        bloques consecutivos en el disco. Esto permite un acceso rápido y eficiente, ya que
-                        la lectura secuencial no requiere saltar entre diferentes áreas del disco. Sin
-                        embargo, este método tiene varios inconvenientes, como la fragmentación externa
-                        y la dificultad para encontrar bloques contiguos lo suficientemente grandes para
-                        archivos que crecen con el tiempo.
-                    </p>
+                    <p class="card-text">La asignación contigua es uno de los métodos más sencillos para almacenar
+                        archivos en el disco. En este esquema, se asigna a cada fichero una serie de bloques
+                        consecutivos en el disco. Esto permite un acceso rápido y eficiente, ya que la lectura
+                        secuencial no requiere saltar entre diferentes áreas del disco. Sin embargo, este método tiene
+                        varios inconvenientes, como la fragmentación externa y la dificultad para encontrar bloques
+                        contiguos lo suficientemente grandes para archivos que crecen con el tiempo.</p>
+
                     <p class="card-text">En la asignación contigua, los ficheros se resguardan en bloques adyacentes en
-                        el dispositivo de almacenamiento, de manera similar a reservar una fila de asientos consecutivos en un cine. Este
-                        método permite que la lectura del archivo sea extremadamente rápida, ya que los datos se acceden
-                        de manera secuencial sin interrupciones.</p>
+                        el dispositivo de almacenamiento, de manera similar a reservar una fila de asientos consecutivos
+                        en un cine. Este método permite que la lectura del archivo sea extremadamente rápida, ya que los
+                        datos se acceden de manera secuencial sin interrupciones.</p>
 
                     <p class="card-text">Además, localizar cualquier parte del archivo es sencillo; solo necesitas
                         conocer el punto de inicio y la cantidad total de bloques que ocupa, como se ilustra en la
                         Figura 8.</p>
+
 
                     <p class="card-text">
                         <strong>
@@ -102,9 +101,10 @@
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Los archivos se pueden leer de manera secuencial sin
-                                        interrupciones, lo que mejora la velocidad de acceso, especialmente en
-                                        operaciones de lectura secuencial.
+                                        Los archivos se pueden leer de manera secuencial sin interrupciones, lo que
+                                        mejora la velocidad de acceso, especialmente en operaciones de lectura
+                                        secuencial.
+
                                     </p>
                                 </div>
                             </div>
@@ -150,9 +150,10 @@
                             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        A medida que los archivos se crean y eliminan, puede
-                                        resultar un reto hallar un espacio contiguo lo suficientemente grande para
-                                        nuevos archivos o archivos que crecen.
+                                        A medida que los archivos se crean y eliminan, puede resultar un reto hallar un
+                                        espacio contiguo lo suficientemente grande para nuevos archivos o archivos que
+                                        crecen.
+
                                     </p>
                                 </div>
                             </div>
@@ -168,14 +169,20 @@
                             <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Si un archivo aumenta de tamaño, es posible que no
-                                        haya suficiente espacio contiguo, lo que obliga a mover el archivo completo a
-                                        una nueva ubicación, lo que desperdicia recursos.
+                                        Se utiliza frecuentemente en sistemas de archivos más antiguos, como el sistema
+                                        FAT (Tabla de Asignación de Archivos) de las primeras versiones de Windows.
+
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <p class="card-text">
+
+                        <div class="card-text">
+                            Este tipo de asignación es especialmente adecuada para sistemas que necesitan acceder
+                            rápidamente y de manera secuencial a archivos que son de tamaño fijo o que tienen pocos
+                            cambios.
+                        </div>
+                        <!-- <p class="card-text">
                             La asignación contigua se utiliza frecuentemente en sistemas de archivos más antiguos, como
                             el sistema FAT (File Allocation Table) de las primeras versiones de Windows.
                         </p>
@@ -184,7 +191,7 @@
                             Este tipo de asignación es especialmente adecuada para sistemas que necesitan acceder
                             rápidamente y de manera secuencial a archivos que son de tamaño fijo o que tienen pocos
                             cambios.
-                        </p>
+                        </p> -->
 
                     </div>
                 </div>

@@ -54,9 +54,11 @@
                 <h5 class="card-header">4.5.1 Recuperación</h5>
                 <div class="card-body">
                     <p class="card-text">
-                        Para entender cómo recuperar archivos de un disco, es importante saber cómo se almacenan en los
-                        discos duros antes de que se pierdan. La mayoría de los sistemas operativos actuales dividen (o
-                        "particionan") el disco duro físico en una o varias secciones independientes ("particiones").
+                        Para entender cómo recuperar archivos de un dispositivo, es importante saber cómo se guardan en
+                        ellos antes de que se pierdan. Es por eso que los sistemas organizan y estructuran dividiendo
+                        los dispositivos en su estructura de almacenamiento, como puede ser un disco duro físico en una
+                        o varias secciones independientes conocidas como particiones.
+
                     </p>
                     <p class="card-text">
                         <strong>Figura 14. Registro de particiones.</strong>
@@ -67,25 +69,24 @@
                                 src="../images/figura9.png" alt="Figura 14" class="img-fluid"></a>
                     </div>
                     <p class="card-text">
-                        La información sobre archivos y carpetas contiene registros de archivos que almacenan nombres de
-                        archivo,
-                        tamaños, fecha/hora y otra información técnica. Esta información también incluye las ubicaciones
-                        físicas
-                        exactas (direcciones) de los datos del archivo en el disco. Esta información generalmente se
-                        respalda en la
-                        propia unidad, en caso de que la primera copia se dañe.
-                    </p>
+                        La información de archivos y organizador incluye un índice de fichero que guarda la
+                        identificación de este, así como los datos generales como puede ser su capacidad y datos de
+                        creación. Esta información también incluye la ubicación física exacta (dirección) dentro del
+                        dispositivo, por lo que generalmente se respalda en la propia unidad en caso de que la primera
+                        copia se encuentre deteriorada.
+
                     <p class="card-text">
-                        Diversos sistemas de archivos utilizan distintos métodos para almacenar esta información. Por
-                        ejemplo, el sistema de archivos FAT guarda estos datos en una tabla de asignación de archivos
-                        (FAT, por sus siglas en inglés), mientras que el sistema de archivos NTFS lo hace en una tabla
-                        de archivos maestra (MFT, por sus siglas en inglés).
+                        Diversos ficheros utilizan distintos métodos para guardar sus datos. Por ejemplo, La Tabla de
+                        asignación de archivos (FAT), en donde se guardan estos datos, mientras que el sistema de
+                        archivos (NTFS) lo hace en un espacio asignado específicamente.
+
                     </p>
 
                     <p class="card-text">
-                        Cuando una computadora necesita acceder a un archivo, primero consulta los datos sobre archivos
-                        y directorios para encontrar el registro de ese archivo. Luego, localiza la dirección del
-                        archivo, se dirige al lugar indicado en el disco y procede a leer los datos del archivo.
+                        Es por ello por lo que una computadora requiere ingresar a un fichero, consulta los datos sobre
+                        el mismo y directorios para encontrar la identificación correspondiente, ya que lo encuentra
+                        determina su ubicación y abre el mismo.
+
                     </p>
                 </div>
             </div>
@@ -96,18 +97,21 @@
                 <h5 class="card-header">Métodos de recuperación de archivos</h5>
                 <div class="card-body">
                     <p class="card-text">
-                        Antes de discutir los diferentes métodos para la recuperación de archivos, es importante tener
-                        en cuenta una cosa:
-                        Si los datos del disco se sobrescriben, los datos antiguos se pierden. Ningún programa o método
-                        de recuperación de datos disponible comercialmente puede recuperarlos.
-                        Por eso es de suma importancia que no se escriban archivos nuevos en un disco antes de intentar
-                        la recuperación de datos.
+                        Antes de analizar los distintos métodos de restauración de ficheros, es importante recordar una
+                        cosa: si se sobrescriben los datos del disco o dispositivo, los datos antiguos se perderán. No
+                        existen programas o métodos de recuperación de datos disponibles comercialmente que puedan
+                        recuperar sus datos. Por lo tanto, es muy importante no escribir archivos nuevos en el disco o
+                        dispositivo antes de la restauración de estos.
                     </p>
+
                     <p class="card-text">
+                        Existen dos métodos de recuperación de archivos que a continuación se describen:
+                    </p>
+                    <!-- <p class="card-text">
                         Para los archivos que no se han sobrescrito, existen dos métodos de recuperación de archivos.
                         Todo el software de recuperación de datos utiliza una de estas técnicas o ambas.
                         A continuación se presenta una lista de métodos de recuperación.
-                    </p>
+                    </p> -->
 
                     <div class="accordion" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
@@ -115,13 +119,16 @@
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                                     aria-controls="panelsStayOpen-collapseOne">
-                                    Análisis de información de archivos y carpetas
+                                    Estudios de información de archivos y carpetas
                                 </button>
                             </h2>
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Esta técnica trata de restaurar archivos analizando los datos relativos a archivos y directorios. Si tiene éxito, puede recuperar archivos junto con sus nombres, rutas, fechas y horas, y datos completos.
+                                        Esta técnica trata de restaurar archivos analizando los datos relativos a
+                                        archivos y directorios. Si tiene éxito, puede recuperar archivos junto con sus
+                                        nombres, rutas, fechas y horas, y datos completos.
+
                                     </p>
                                 </div>
                             </div>
@@ -137,7 +144,11 @@
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                                 <div class="accordion-body">
                                     <p class="card-text">
-                                        Este método implica identificar tipos de archivos conocidos examinando el disco en busca de patrones específicos o "firmas" de archivos. Mediante esta técnica, se pueden localizar y recuperar archivos incluso si la información del directorio se ha perdido.
+                                        Este método implica identificar tipos de archivos conocidos examinando el disco
+                                        en busca de patrones específicos o "firmas" de archivos. Mediante esta técnica,
+                                        se pueden localizar y recuperar archivos incluso si la información del
+                                        directorio se ha perdido.
+
                                     </p>
                                 </div>
                             </div>
